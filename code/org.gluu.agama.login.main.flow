@@ -16,7 +16,7 @@ Repeat 6 times max
           // Forget password start
           Log "@info Forget password portion starting"
           // Trigger sub-routine to re-set password
-          passResetResult = Trigger org.gluu.agama.login.reset 
+          passResetResult = Trigger org.gluu.agama.pw.reset 
           // If password reset successful 
           When passResetResult.success is true
                // Password Reset Result
@@ -46,5 +46,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_kfdpx = {success:false, error: "Password validation failed!"}
-Finish it_kfdpx
+it_yicfh = {success:false, error: "Password validation failed!"}
+Finish it_yicfh
