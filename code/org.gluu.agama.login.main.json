@@ -761,7 +761,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -874,7 +874,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		}
 	],
@@ -1333,8 +1333,8 @@
 		}
 	],
 	"viewport": {
-		"x": -2045.830174888733,
-		"y": -1407.6882600125205,
-		"zoom": 1.3491025343396987
+		"x": -967.6366481888072,
+		"y": -715.8453716804024,
+		"zoom": 0.8145075630702155
 	}
 }
