@@ -744,7 +744,7 @@
 				"previousNodeId": "logNode-f93686de-a8b5-4ede-aa76-86b4c5ca8db4",
 				"agamaData": {
 					"nodeIcon": "fluent-mdl2:trigger-approval",
-					"flowFileName": "org.gluu.agama.pw.reset",
+					"flowFileName": "org.gluu.agama.login.reset",
 					"arguments": [],
 					"asssignedVariableName": "passResetResult",
 					"exceptionVariableField": "",
@@ -761,7 +761,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -874,7 +874,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		}
 	],
@@ -1333,8 +1333,8 @@
 		}
 	],
 	"viewport": {
-		"x": -373.45000448836186,
-		"y": -188.41823088605202,
-		"zoom": 0.5
+		"x": -2045.830174888733,
+		"y": -1407.6882600125205,
+		"zoom": 1.3491025343396987
 	}
 }
