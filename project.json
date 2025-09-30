@@ -25,6 +25,11 @@
             "maxLoginAttempt": 6,
             "lockExpTime": 180,
             "enableLock": true
+        },
+        "org.gluu.agama.login.main": {
+            "maxLoginAttempt": 6,
+            "lockExpTime": 180,
+            "enableLock": true
         }
     },
     "name": "agama-login-flow"
