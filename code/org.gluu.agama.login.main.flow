@@ -62,7 +62,8 @@ Repeat 6 times max
                                              Log "@ " __________
                                         Log "@ " __________
                                    Otherwise
-                                        Log "@ " __________
+                                        //  Add log entry with collected code in log file.
+                                        Log "@info Information provided by the user is : " otpCreds.code
                                         Call __________#__________ 
                                         Log "@ " __________
                               Log "@info OTP verification loop completed"
@@ -88,5 +89,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_vxomh = {success:false, error: "Password validation failed!"}
-Finish it_vxomh
+it_mxnnj = {success:false, error: "Password validation failed!"}
+Finish it_mxnnj
