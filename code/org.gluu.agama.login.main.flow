@@ -79,6 +79,7 @@ Repeat 6 times max
                                         Otherwise
                                              // The maximum number of attempt has been reached.
                                              Log "@info Invalid code provided "
+                                             // Provide feedback to user.
                                              uiFeedback.errorMessage = "Invalid code provided."
                               Log "@info OTP verification loop completed"
                               it_otpmax = { success: false, error: "ExceededTheNumberOfAttemptsAllowed" }
@@ -103,5 +104,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_zouic = {success:false, error: "Password validation failed!"}
-Finish it_zouic
+it_phexg = {success:false, error: "Password validation failed!"}
+Finish it_phexg
