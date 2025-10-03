@@ -5,6 +5,8 @@ Flow org.gluu.agama.login.main
 Log "@info Start execution of the password validation flow."
 //  Create json variable for UI feedback.
 uiFeedback = {}
+uiFeedback.errorMessage = ""
+uiFeedback.infoMessage = ""
 // Get an instance of PasswordService Class.
 validationService = Call org.gluu.agama.login.NewPasswordService#getInstance conf
 // Iterate x times max
@@ -46,5 +48,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_lzltl = {success:false, error: "Password validation failed!"}
-Finish it_lzltl
+it_zgmqi = {success:false, error: "Password validation failed!"}
+Finish it_zgmqi
