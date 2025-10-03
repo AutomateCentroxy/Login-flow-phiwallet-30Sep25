@@ -61,7 +61,7 @@ Repeat 6 times max
                                         // Resend otp
                                         resendHasSucceed = Call otpValidationResult sendOTPCode phone credentials.username
                                         When resendHasSucceed is null
-                                             Log "@ " __________
+                                             Log "@info Fail to resend new code to user. " resendHasSucceed
                                         Log "@info New OTP code send successfully!" resendHasSucceed
                                    Otherwise
                                         //  Add log entry with collected code in log file.
@@ -93,5 +93,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_gnxsw = {success:false, error: "Password validation failed!"}
-Finish it_gnxsw
+it_tohgq = {success:false, error: "Password validation failed!"}
+Finish it_tohgq
