@@ -71,5 +71,5 @@ Repeat 3 times max
 // Max attampt reached
 Log "@info Max attampt reached"
 // Max attempts reached
-it_olfxb = {success:false, error: "Max attempts reached"}
-Finish it_olfxb
+it_nbcyn = {success:false, error: "Max attempts reached"}
+Finish it_nbcyn
