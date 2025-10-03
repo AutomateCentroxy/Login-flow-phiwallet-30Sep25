@@ -2247,6 +2247,44 @@
 				"width": 170,
 				"height": 122
 			},
+			"selected": false
+		},
+		{
+			"id": "assignmentNode-274bf398-4ac5-471e-b20f-bcd99b05e778",
+			"type": "assignmentNode",
+			"position": {
+				"x": 7074.940637392266,
+				"y": 1570.1919900854941
+			},
+			"data": {
+				"id": "assignmentNode-274bf398-4ac5-471e-b20f-bcd99b05e778",
+				"type": "assignmentNode",
+				"position": {
+					"x": 7074.940637392266,
+					"y": 1570.1919900854941
+				},
+				"previousNodeId": "callNode-1d2f389c-bd60-4956-9473-0327e4ed8e4a",
+				"agamaData": {
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "\"Phone Number updated in user profile\"",
+							"assignedVariableName": "uiFeedback.infoMessage"
+						}
+					],
+					"nodeIcon": "material-symbols:equal",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": ""
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
 			"selected": true
 		}
 	],
@@ -3383,11 +3421,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_logNode-f3c8f303-7841-4234-9b15-0880746d27a9"
+		},
+		{
+			"id": "callNode-1d2f389c-bd60-4956-9473-0327e4ed8e4a-assignmentNode-274bf398-4ac5-471e-b20f-bcd99b05e778",
+			"type": "default",
+			"source": "callNode-1d2f389c-bd60-4956-9473-0327e4ed8e4a",
+			"target": "assignmentNode-274bf398-4ac5-471e-b20f-bcd99b05e778",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_callNode-1d2f389c-bd60-4956-9473-0327e4ed8e4a"
 		}
 	],
 	"viewport": {
-		"x": -4884.785477118987,
-		"y": -1092.9104560355267,
+		"x": -4978.930471823052,
+		"y": -952.8605468773267,
 		"zoom": 0.7834971869493407
 	}
 }
