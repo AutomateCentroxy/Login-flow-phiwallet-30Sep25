@@ -1154,7 +1154,7 @@
 					"displayName": "Valid Mobile Number",
 					"hasComment": true,
 					"comment": "",
-					"asssignedVariableName": "validnNmber"
+					"asssignedVariableName": "validNumber"
 				}
 			},
 			"measured": {
@@ -1807,8 +1807,8 @@
 		}
 	],
 	"viewport": {
-		"x": -3082.0050358507715,
-		"y": -677.3821788651825,
+		"x": -3492.0050358507715,
+		"y": -816.3821788651825,
 		"zoom": 1.161508731925722
 	}
 }
