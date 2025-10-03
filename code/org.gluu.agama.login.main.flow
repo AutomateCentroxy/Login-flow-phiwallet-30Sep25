@@ -50,6 +50,7 @@ Repeat 6 times max
                               // sent sms otp
                               smsOtpSend = Call validationService sendOTPCode credentials.username phone
                          Otherwise
+                              // "This phone is already used by another account. Please enter a different one.
                               uiFeedback.errorMessage = "This phone is already used by another account. Please enter a different one."
                               Log "@info This phone is already used by another account. Please enter a different one."
           // Invalid credentials provided.
@@ -66,5 +67,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_iqcvc = {success:false, error: "Password validation failed!"}
-Finish it_iqcvc
+it_vleiw = {success:false, error: "Password validation failed!"}
+Finish it_vleiw
