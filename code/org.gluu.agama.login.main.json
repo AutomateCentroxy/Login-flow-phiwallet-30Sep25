@@ -337,8 +337,8 @@
 				"y": 320.2186455188687
 			},
 			"measured": {
-				"width": 168,
-				"height": 120
+				"width": 170,
+				"height": 122
 			},
 			"selected": false,
 			"dragging": false
@@ -1008,8 +1008,8 @@
 				}
 			},
 			"measured": {
-				"width": 168,
-				"height": 120
+				"width": 170,
+				"height": 122
 			},
 			"selected": false,
 			"dragging": false
@@ -1532,8 +1532,8 @@
 				}
 			},
 			"measured": {
-				"width": 168,
-				"height": 120
+				"width": 170,
+				"height": 122
 			},
 			"selected": false
 		},
@@ -1828,8 +1828,8 @@
 				}
 			},
 			"measured": {
-				"width": 168,
-				"height": 120
+				"width": 170,
+				"height": 122
 			},
 			"selected": false
 		},
@@ -1851,7 +1851,7 @@
 				"agamaData": {
 					"javaClassName": "",
 					"javaMethodName": "sendOTPCode",
-					"javaVariableName": "otpValidationResult",
+					"javaVariableName": "validationService",
 					"exceptionVariableField": "",
 					"callType": "Call method on instance",
 					"arguments": [
@@ -2017,8 +2017,8 @@
 				}
 			},
 			"measured": {
-				"width": 168,
-				"height": 120
+				"width": 170,
+				"height": 122
 			},
 			"selected": false
 		},
@@ -2203,8 +2203,8 @@
 				}
 			},
 			"measured": {
-				"width": 168,
-				"height": 120
+				"width": 170,
+				"height": 122
 			},
 			"selected": false
 		},
@@ -3659,8 +3659,8 @@
 		}
 	],
 	"viewport": {
-		"x": -3451.9292584956493,
-		"y": -884.741205499284,
-		"zoom": 0.6745512671698494
+		"x": -3666.647222675123,
+		"y": -853.34194918186,
+		"zoom": 0.7412335049014176
 	}
 }
