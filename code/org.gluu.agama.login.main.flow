@@ -47,8 +47,10 @@ Repeat 6 times max
                          phoneInput = RRF "InputMobileNumber.ftlh" validationService
                          validNumber = Call validationService isPhoneUnique credentials.username phone
                          When validNumber is ture
+                              Call __________#__________ 
                          Otherwise
                               uiFeedback.errorMessage = "This phone is already used by another account. Please enter a different one."
+                              Log "@info This phone is already used by another account. Please enter a different one."
           // Invalid credentials provided.
           Log "@error Invalid credentials provided"
           When conf.enableLock is true
@@ -63,5 +65,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_xvgsp = {success:false, error: "Password validation failed!"}
-Finish it_xvgsp
+it_gyyxk = {success:false, error: "Password validation failed!"}
+Finish it_gyyxk
