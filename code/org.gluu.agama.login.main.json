@@ -1161,7 +1161,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1242,6 +1242,82 @@
 				"height": 60
 			},
 			"selected": false
+		},
+		{
+			"id": "callNode-48b4f965-92f8-4018-ad12-57fef36340ce",
+			"type": "callNode",
+			"position": {
+				"x": 3833.015686391769,
+				"y": 1145.6876612370434
+			},
+			"data": {
+				"id": "callNode-48b4f965-92f8-4018-ad12-57fef36340ce",
+				"type": "callNode",
+				"position": {
+					"x": 3833.015686391769,
+					"y": 1145.6876612370434
+				},
+				"previousNodeId": "whenNode-4ccc8e62-3540-4839-9c00-03d32cd20451",
+				"branching": "success",
+				"agamaData": {
+					"javaClassName": "",
+					"javaMethodName": "",
+					"javaVariableName": "",
+					"exceptionVariableField": "",
+					"callType": "Call static method",
+					"arguments": [],
+					"nodeIcon": "material-symbols:code",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": ""
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			}
+		},
+		{
+			"id": "assignmentNode-44b1236a-1ad5-43e6-89e5-4dbad78da3b5",
+			"type": "assignmentNode",
+			"position": {
+				"x": 3833.015686391769,
+				"y": 695.6876612370432
+			},
+			"data": {
+				"id": "assignmentNode-44b1236a-1ad5-43e6-89e5-4dbad78da3b5",
+				"type": "assignmentNode",
+				"position": {
+					"x": 3833.015686391769,
+					"y": 695.6876612370432
+				},
+				"previousNodeId": "whenNode-4ccc8e62-3540-4839-9c00-03d32cd20451",
+				"branching": "otherwise",
+				"agamaData": {
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "\"This phone is already used by another account. Please enter a different one.\"",
+							"assignedVariableName": "uiFeedback.errorMessage"
+						}
+					],
+					"nodeIcon": "material-symbols:equal",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": ""
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -1865,11 +1941,49 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_callNode-1698e86a-9a35-474c-90fa-a041d64ea405"
+		},
+		{
+			"id": "whenNode-4ccc8e62-3540-4839-9c00-03d32cd20451-callNode-48b4f965-92f8-4018-ad12-57fef36340ce",
+			"type": "default",
+			"source": "whenNode-4ccc8e62-3540-4839-9c00-03d32cd20451",
+			"target": "callNode-48b4f965-92f8-4018-ad12-57fef36340ce",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "Condition met",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-4ccc8e62-3540-4839-9c00-03d32cd20451_success"
+		},
+		{
+			"id": "whenNode-4ccc8e62-3540-4839-9c00-03d32cd20451-assignmentNode-44b1236a-1ad5-43e6-89e5-4dbad78da3b5",
+			"type": "default",
+			"source": "whenNode-4ccc8e62-3540-4839-9c00-03d32cd20451",
+			"target": "assignmentNode-44b1236a-1ad5-43e6-89e5-4dbad78da3b5",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "otherwise",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-4ccc8e62-3540-4839-9c00-03d32cd20451_otherwise"
 		}
 	],
 	"viewport": {
-		"x": -2489.337421054045,
-		"y": -552.4970579520536,
-		"zoom": 0.860949188338904
+		"x": -2353.8258161157514,
+		"y": -422.50702413196916,
+		"zoom": 0.7412335049014176
 	}
 }
