@@ -71,5 +71,5 @@ Repeat 3 times max
 // Max attampt reached
 Log "@info Max attampt reached"
 // Max attempts reached
-it_nbcyn = {success:false, error: "Max attempts reached"}
-Finish it_nbcyn
+it_sdhzi = {success:false, error: "Max attempts reached"}
+Finish it_sdhzi
