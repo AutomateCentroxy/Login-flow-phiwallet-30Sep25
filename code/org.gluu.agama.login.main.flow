@@ -46,9 +46,7 @@ Repeat 6 times max
                          //  Show UI to collect Mobile number from user.
                          phoneInput = RRF "InputMobileNumber.ftlh" validationService
                          validNumber = Call validationService isPhoneUnique credentials.username phone
-                         When validNumber is true
-                              Call __________#__________ 
-                         Otherwise
+                         When validNumber is false
                               uiFeedback.errorMessage = "This phone is already used by another account. Please enter a different one."
           // Invalid credentials provided.
           Log "@error Invalid credentials provided"
@@ -64,5 +62,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_yadvu = {success:false, error: "Password validation failed!"}
-Finish it_yadvu
+it_hxsqe = {success:false, error: "Password validation failed!"}
+Finish it_hxsqe
