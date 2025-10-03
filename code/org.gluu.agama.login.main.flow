@@ -93,6 +93,7 @@ Repeat 6 times max
                               uiFeedback.errorMessage = "This phone is already used by another account. Please enter a different one."
                               // "This phone is already used by another account. Please enter a different one.
                               Log "@info This phone is already used by another account. Please enter a different one."
+                    Log "@info ValidMobileNumber check competed"
           // Invalid credentials provided.
           Log "@error Invalid credentials provided"
           When conf.enableLock is true
@@ -107,5 +108,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_cahyi = {success:false, error: "Password validation failed!"}
-Finish it_cahyi
+it_xlwxf = {success:false, error: "Password validation failed!"}
+Finish it_xlwxf
