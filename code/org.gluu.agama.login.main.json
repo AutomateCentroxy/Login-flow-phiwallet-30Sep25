@@ -80,6 +80,16 @@
 							"variableTypeCheck": false,
 							"assignmentExpression": "{}",
 							"assignedVariableName": "uiFeedback"
+						},
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "\"\"",
+							"assignedVariableName": "uiFeedback.errorMessage"
+						},
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "\"\"",
+							"assignedVariableName": "uiFeedback.infoMessage"
 						}
 					]
 				},
@@ -101,7 +111,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"data": {
@@ -138,7 +148,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"data": {
@@ -198,7 +208,8 @@
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": false
 		},
 		{
 			"data": {
@@ -1334,8 +1345,8 @@
 		}
 	],
 	"viewport": {
-		"x": 30.782692355297286,
-		"y": -13.154862348984011,
+		"x": -6.483060391996446,
+		"y": -91.18986202628747,
 		"zoom": 0.860949188338904
 	}
 }
