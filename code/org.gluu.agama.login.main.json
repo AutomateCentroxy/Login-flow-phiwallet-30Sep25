@@ -1501,7 +1501,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "logNode-0a19aeda-6057-4f1d-ad3b-fc8d4139c003",
@@ -1520,8 +1520,8 @@
 				"previousNodeId": "repeatNode-5a448ece-3a7f-4894-aa9b-df36ed3e483e",
 				"branching": "continue",
 				"agamaData": {
-					"logMessage": "",
-					"logLevel": "",
+					"logMessage": "\"OTP verification loop completed\"",
+					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
 					"titleColor": "",
@@ -1532,9 +1532,10 @@
 				}
 			},
 			"measured": {
-				"width": 170,
-				"height": 122
-			}
+				"width": 168,
+				"height": 120
+			},
+			"selected": false
 		},
 		{
 			"id": "assignmentNode-e282e37b-278e-47b7-acd1-f053d3ccc788",
@@ -1552,12 +1553,18 @@
 				},
 				"previousNodeId": "logNode-0a19aeda-6057-4f1d-ad3b-fc8d4139c003",
 				"agamaData": {
-					"assignments": [],
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "{ success: false, error: \"ExceededTheNumberOfAttemptsAllowed\" }",
+							"assignedVariableName": "it_otpmax"
+						}
+					],
 					"nodeIcon": "material-symbols:equal",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "",
+					"displayName": "Max SMS Otp tried",
 					"hasComment": true,
 					"comment": ""
 				}
@@ -1565,7 +1572,8 @@
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": false
 		},
 		{
 			"id": "finishNode-b45072fc-40fc-4cc2-a36f-27ed42a2f792",
@@ -1588,16 +1596,18 @@
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "",
+					"comment": "SMS OTP error",
 					"flowfilename": "",
-					"returnVariable": "",
+					"returnVariable": "it_otpmax",
+					"finishMode": "withVariable",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -2413,8 +2423,8 @@
 		}
 	],
 	"viewport": {
-		"x": -3894.974599469253,
-		"y": -699.8005484420632,
-		"zoom": 0.860949188338904
+		"x": -4390.669391925955,
+		"y": -927.5521841030195,
+		"zoom": 0.9460576467255961
 	}
 }
