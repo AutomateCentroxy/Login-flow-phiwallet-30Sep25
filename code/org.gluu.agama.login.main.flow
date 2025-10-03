@@ -51,6 +51,7 @@ Repeat 6 times max
                               smsOtpSend = Call validationService sendOTPCode credentials.username phone
                               // The OTP Code has been send to user.
                               Log "@info OTP generated and send to: " phone
+                              otpValidationResult = false
                          Otherwise
                               // "This phone is already used by another account. Please enter a different one.
                               uiFeedback.errorMessage = "This phone is already used by another account. Please enter a different one."
@@ -70,5 +71,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_zslkq = {success:false, error: "Password validation failed!"}
-Finish it_zslkq
+it_fdnsa = {success:false, error: "Password validation failed!"}
+Finish it_fdnsa
