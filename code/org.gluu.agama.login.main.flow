@@ -34,6 +34,7 @@ Repeat 6 times max
                Log "@info Valid credentials provided"
                // Phone verified attribute check
                phoneVerified = Call validationService isPhoneVerified credentials.username
+               When 
           // Invalid credentials provided.
           Log "@error Invalid credentials provided"
           When conf.enableLock is true
@@ -48,5 +49,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_kppfz = {success:false, error: "Password validation failed!"}
-Finish it_kppfz
+it_iuspf = {success:false, error: "Password validation failed!"}
+Finish it_iuspf
