@@ -964,14 +964,14 @@
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": ""
+					"comment": "User already have the phone number"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 122
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "logNode-2828ed25-a297-4a24-a2fe-0f4c895ba340",
@@ -997,14 +997,14 @@
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": ""
+					"comment": "\"User already have the phone number\""
 				}
 			},
 			"measured": {
 				"width": 168,
 				"height": 120
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
