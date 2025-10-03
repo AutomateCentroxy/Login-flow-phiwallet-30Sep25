@@ -160,12 +160,13 @@ public class JansNewPasswordService extends NewPasswordService {
         }
     }
 
-    public boolean markPhoneAsVerified(String username, String phone) {
+
+    public String markPhoneAsVerified(String username, String phone) {
         try {
             User user = userService.getUser(username);
             if (user == null) {
                 logger.warn("User {} not found while marking phone verified", username);
-                return false;
+                return "User not found.";
             }
 
             // Set the phone number and mark it as verified
@@ -174,11 +175,10 @@ public class JansNewPasswordService extends NewPasswordService {
             userService.updateUser(user);
 
             logger.info("Phone {} verified and updated for user {}", phone, username);
-            return true;
+            return "Phone " + phone + " verified successfully for user " + username;
         } catch (Exception e) {
             logger.error("Error marking phone verified for {}: {}", username, e.getMessage(), e);
-            return false;
-        }
+            return "Error: " + e.getMessage();
     }
 
     private String generateSMSOtpCode(int codeLength) {
