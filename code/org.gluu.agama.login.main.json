@@ -1913,7 +1913,7 @@
 				"width": 110,
 				"height": 60
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "logNode-c697c0b0-85d2-4dcb-85c7-79606ee533f7",
@@ -1932,13 +1932,13 @@
 				"previousNodeId": "whenNode-cd397aac-da52-49e3-b81f-6ed1113594ba",
 				"branching": "continue",
 				"agamaData": {
-					"logMessage": "",
-					"logLevel": "",
+					"logMessage": "\"New OTP code send successfully!\" resendHasSucceed",
+					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "",
+					"displayName": "Log code resend",
 					"hasComment": true,
 					"comment": ""
 				}
@@ -1946,7 +1946,8 @@
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": true
 		},
 		{
 			"id": "assignmentNode-d2ae5f1a-956a-4d66-953c-455e955345a9",
@@ -3085,8 +3086,8 @@
 		}
 	],
 	"viewport": {
-		"x": -3119.4085910361027,
-		"y": -860.158875704702,
+		"x": -3668.4085910361027,
+		"y": -985.158875704702,
 		"zoom": 0.6745512671698494
 	}
 }
