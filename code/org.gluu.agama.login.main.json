@@ -1686,7 +1686,7 @@
 				"width": 110,
 				"height": 60
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1706,22 +1706,22 @@
 				"previousNodeId": "whenNode-f4445ba0-280a-47d6-8283-dcc4e9e9bbc2",
 				"branching": "otherwise",
 				"agamaData": {
-					"logMessage": "",
-					"logLevel": "",
+					"logMessage": "\"Information provided by the user is : \" otpCreds.code",
+					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "",
+					"displayName": "LOG",
 					"hasComment": true,
-					"comment": ""
+					"comment": " Add log entry with collected code in log file."
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 122
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -3065,8 +3065,8 @@
 		}
 	],
 	"viewport": {
-		"x": -2365.0615510694606,
-		"y": -596.2376142399569,
-		"zoom": 0.5
+		"x": -3424.4085910361027,
+		"y": -818.158875704702,
+		"zoom": 0.6745512671698494
 	}
 }
