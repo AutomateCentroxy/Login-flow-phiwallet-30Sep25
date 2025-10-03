@@ -73,7 +73,7 @@ Repeat 6 times max
                                         otpValidationResult = Call validationService validateOTPCode phone otpCreds.code
                                         // Add log entry withvalidation result in log file.
                                         Log "@info OTP validation result is:" otpValidationResult
-                                        When 
+                                        When otpValidationResult is true
                                              Log "@ " __________
                                              Call __________#__________ 
                                         Otherwise
@@ -101,5 +101,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_bcgue = {success:false, error: "Password validation failed!"}
-Finish it_bcgue
+it_wncox = {success:false, error: "Password validation failed!"}
+Finish it_wncox
