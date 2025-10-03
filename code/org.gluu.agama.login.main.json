@@ -1721,7 +1721,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1741,24 +1741,29 @@
 				"previousNodeId": "logNode-f8e89063-2987-4484-a3db-bea64b079be4",
 				"agamaData": {
 					"javaClassName": "",
-					"javaMethodName": "",
-					"javaVariableName": "",
+					"javaMethodName": "validateOTPCode",
+					"javaVariableName": "validationService",
 					"exceptionVariableField": "",
-					"callType": "Call static method",
-					"arguments": [],
+					"callType": "Call method on instance",
+					"arguments": [
+						"phone",
+						"otpCreds.code"
+					],
 					"nodeIcon": "material-symbols:code",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": ""
+					"comment": " Validate the OTP code provided by the user.",
+					"asssignedVariableName": "otpValidationResult"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": true
 		},
 		{
 			"id": "logNode-ca78eb11-2b1f-4d74-a683-ed2e7c312ce7",
