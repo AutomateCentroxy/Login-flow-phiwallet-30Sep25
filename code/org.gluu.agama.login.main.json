@@ -337,8 +337,8 @@
 				"y": 320.2186455188687
 			},
 			"measured": {
-				"width": 170,
-				"height": 122
+				"width": 168,
+				"height": 120
 			},
 			"selected": false,
 			"dragging": false
@@ -1103,8 +1103,8 @@
 					"assignments": [
 						{
 							"variableTypeCheck": true,
-							"assignmentExpression": "phoneInput.phoneNumber",
-							"assignedVariableName": "phone"
+							"assignmentExpression": "\"User don't have registered mobile number\"",
+							"assignedVariableName": "uiFeedback.infoMessage"
 						}
 					],
 					"nodeIcon": "material-symbols:equal",
@@ -1120,7 +1120,8 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false
+			"selected": true,
+			"dragging": false
 		},
 		{
 			"id": "repeatNode-d4595f00-7930-4770-9623-0545ad93523b",
@@ -1153,7 +1154,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "callNode-1698e86a-9a35-474c-90fa-a041d64ea405",
@@ -1786,8 +1787,8 @@
 		}
 	],
 	"viewport": {
-		"x": -2405.851949221798,
-		"y": -588.6063023991422,
+		"x": -2275.465818134484,
+		"y": -444.4277812525497,
 		"zoom": 1
 	}
 }
