@@ -1607,6 +1607,42 @@
 				"width": 170,
 				"height": 122
 			},
+			"selected": false
+		},
+		{
+			"id": "rrfNode-267496b3-1013-403d-838b-02b673319819",
+			"type": "rrfNode",
+			"position": {
+				"x": 5068.80195897269,
+				"y": 1387.5571001135634
+			},
+			"data": {
+				"id": "rrfNode-267496b3-1013-403d-838b-02b673319819",
+				"type": "rrfNode",
+				"position": {
+					"x": 5068.80195897269,
+					"y": 1387.5571001135634
+				},
+				"previousNodeId": "repeatNode-5a448ece-3a7f-4894-aa9b-df36ed3e483e",
+				"branching": "repeat",
+				"agamaData": {
+					"assignments": [],
+					"nodeIcon": "ph:globe-simple",
+					"templatePath": "otp.ftlh",
+					"asssignedVariableName": "otpCreds",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "RRF",
+					"hasComment": true,
+					"comment": " Show UI to collect OTP code from user.",
+					"arguments": "uiFeedback"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
 			"selected": true
 		}
 	],
@@ -2420,11 +2456,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_assignmentNode-e282e37b-278e-47b7-acd1-f053d3ccc788"
+		},
+		{
+			"id": "repeatNode-5a448ece-3a7f-4894-aa9b-df36ed3e483e-rrfNode-267496b3-1013-403d-838b-02b673319819",
+			"type": "default",
+			"source": "repeatNode-5a448ece-3a7f-4894-aa9b-df36ed3e483e",
+			"target": "rrfNode-267496b3-1013-403d-838b-02b673319819",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "repeat",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_repeatNode-5a448ece-3a7f-4894-aa9b-df36ed3e483e_repeat"
 		}
 	],
 	"viewport": {
-		"x": -4390.669391925955,
-		"y": -927.5521841030195,
+		"x": -4567.669391925955,
+		"y": -1067.5521841030195,
 		"zoom": 0.9460576467255961
 	}
 }
