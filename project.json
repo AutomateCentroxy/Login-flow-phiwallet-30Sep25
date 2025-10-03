@@ -18,17 +18,6 @@
         "org.gluu.agama.pw.main": {
             "maxLoginAttempt": 6,
             "lockExpTime": 180,
-            "enableLock": true
-        },
-        "org.gluu.agama.pw.reset": {},
-        "": {
-            "maxLoginAttempt": 6,
-            "lockExpTime": 180,
-            "enableLock": true
-        },
-        "org.gluu.agama.login.main": {
-            "maxLoginAttempt": 6,
-            "lockExpTime": 180,
             "enableLock": true,
             "ACCOUNT_SID": "PUT_YOUR_TWILIO_ACCOUNT_SID_HERE",
             "AUTH_TOKEN": "PUT_YOUR_TWILIO_AUTH_TOKEN_HERE",
