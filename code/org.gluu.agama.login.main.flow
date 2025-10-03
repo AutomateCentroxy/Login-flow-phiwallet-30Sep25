@@ -53,8 +53,10 @@ Repeat 6 times max
                               Log "@info OTP generated and send to: " phone
                               otpValidationResult = false
                               maxSMS = Repeat 4 times max
-                              Log "@ " __________
-                              Finish __________
+                              Log "@info OTP verification loop completed"
+                              it_otpmax = { success: false, error: "ExceededTheNumberOfAttemptsAllowed" }
+                              // SMS OTP error
+                              Finish it_otpmax
                          Otherwise
                               // "This phone is already used by another account. Please enter a different one.
                               uiFeedback.errorMessage = "This phone is already used by another account. Please enter a different one."
@@ -74,5 +76,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_zzxyv = {success:false, error: "Password validation failed!"}
-Finish it_zzxyv
+it_badki = {success:false, error: "Password validation failed!"}
+Finish it_badki
