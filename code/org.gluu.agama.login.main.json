@@ -1120,6 +1120,47 @@
 				"width": 170,
 				"height": 122
 			},
+			"selected": false
+		},
+		{
+			"id": "callNode-1698e86a-9a35-474c-90fa-a041d64ea405",
+			"type": "callNode",
+			"position": {
+				"x": 3149.510733809154,
+				"y": 675.2499297408301
+			},
+			"data": {
+				"id": "callNode-1698e86a-9a35-474c-90fa-a041d64ea405",
+				"type": "callNode",
+				"position": {
+					"x": 3149.510733809154,
+					"y": 675.2499297408301
+				},
+				"previousNodeId": "assignmentNode-2f7bc226-3376-4c1f-b95e-0c359ca6a7b9",
+				"agamaData": {
+					"javaClassName": "",
+					"javaMethodName": "isPhoneUnique",
+					"javaVariableName": "validationService",
+					"exceptionVariableField": "",
+					"callType": "Call method on instance",
+					"arguments": [
+						"credentials.username",
+						"phone"
+					],
+					"nodeIcon": "material-symbols:code",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "Valid Mobile Number",
+					"hasComment": true,
+					"comment": "",
+					"asssignedVariableName": "validnNmber"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
 			"selected": true
 		}
 	],
@@ -1689,11 +1730,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_rrfNode-765f790f-a7e9-46cd-92aa-bf3f5a448e48"
+		},
+		{
+			"id": "assignmentNode-2f7bc226-3376-4c1f-b95e-0c359ca6a7b9-callNode-1698e86a-9a35-474c-90fa-a041d64ea405",
+			"type": "default",
+			"source": "assignmentNode-2f7bc226-3376-4c1f-b95e-0c359ca6a7b9",
+			"target": "callNode-1698e86a-9a35-474c-90fa-a041d64ea405",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_assignmentNode-2f7bc226-3376-4c1f-b95e-0c359ca6a7b9"
 		}
 	],
 	"viewport": {
-		"x": -3611.5241428932386,
-		"y": -759.348658553997,
+		"x": -3707.5241428932386,
+		"y": -766.348658553997,
 		"zoom": 1.3491025343396987
 	}
 }
