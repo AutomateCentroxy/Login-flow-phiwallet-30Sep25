@@ -971,7 +971,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "logNode-2828ed25-a297-4a24-a2fe-0f4c895ba340",
@@ -989,8 +989,8 @@
 				},
 				"previousNodeId": "assignmentNode-891ceed3-cd23-4edc-a2de-2a316cdb14cd",
 				"agamaData": {
-					"logMessage": "",
-					"logLevel": "",
+					"logMessage": "\"User already have the phone number\"",
+					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
 					"titleColor": "",
@@ -1003,7 +1003,9 @@
 			"measured": {
 				"width": 168,
 				"height": 120
-			}
+			},
+			"selected": true,
+			"dragging": false
 		},
 		{
 			"id": "finishNode-1a560e66-76c8-4065-bf72-b4fbeb3e01c4",
