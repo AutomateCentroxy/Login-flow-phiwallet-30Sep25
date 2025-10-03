@@ -33,7 +33,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"deletable": false,
 			"dragging": false
 		},
@@ -110,7 +110,7 @@
 					"displayName": "Service initialization",
 					"hasComment": true,
 					"comment": "Get an instance of PasswordService Class.",
-					"javaClassName": "org.gluu.agama.pw.PasswordService",
+					"javaClassName": "org.gluu.agama.login.NewPasswordService",
 					"javaMethodName": "getInstance",
 					"javaVariableName": "",
 					"exceptionVariableField": "",
@@ -137,7 +137,8 @@
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": true
 		},
 		{
 			"data": {
