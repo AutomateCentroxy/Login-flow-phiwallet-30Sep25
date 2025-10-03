@@ -53,7 +53,7 @@
 				},
 				"previousNodeId": "startNode-fe3c0c2a-a5e3-41db-9c9f-7c458f93b654",
 				"agamaData": {
-					"javaClassName": "org.gluu.agama.login.ResetService",
+					"javaClassName": "org.gluu.agama.login.NewResetService",
 					"javaMethodName": "getInstance",
 					"javaVariableName": "",
 					"exceptionVariableField": "",
@@ -1906,8 +1906,8 @@
 		}
 	],
 	"viewport": {
-		"x": 10.803632342126662,
-		"y": 9.512128212871858,
-		"zoom": 0.5494271087884399
+		"x": 94.40789901550227,
+		"y": 331.4372990064128,
+		"zoom": 0.860949188338904
 	}
 }
