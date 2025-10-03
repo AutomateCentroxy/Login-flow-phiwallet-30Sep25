@@ -95,6 +95,7 @@ Repeat 6 times max
                               Log "@info This phone is already used by another account. Please enter a different one."
                     Log "@info ValidMobileNumber check competed"
                     it_ValidMobileNumber = { success: false, error: "ExceededTheNumberOfAttemptsAllowed" }
+                    Finish it_ValidMobileNumber
           // Invalid credentials provided.
           Log "@error Invalid credentials provided"
           When conf.enableLock is true
@@ -109,5 +110,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_weigc = {success:false, error: "Password validation failed!"}
-Finish it_weigc
+it_cxjmr = {success:false, error: "Password validation failed!"}
+Finish it_cxjmr
