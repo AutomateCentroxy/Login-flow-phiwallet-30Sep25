@@ -39,7 +39,7 @@ Repeat 6 times max
                     uiFeedback.infoMessage = "User already have phone number"
                     // "User already have the phone number"
                     Log "@info User already have the phone number"
-                    Finish __________
+                    Finish credentials.username
           // Invalid credentials provided.
           Log "@error Invalid credentials provided"
           When conf.enableLock is true
@@ -54,5 +54,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_vawok = {success:false, error: "Password validation failed!"}
-Finish it_vawok
+it_rjyss = {success:false, error: "Password validation failed!"}
+Finish it_rjyss
