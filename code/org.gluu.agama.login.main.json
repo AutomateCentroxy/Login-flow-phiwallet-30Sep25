@@ -1487,12 +1487,12 @@
 				"previousNodeId": "assignmentNode-ee1bf075-15e2-4961-89eb-aabf8d270c5c",
 				"agamaData": {
 					"nodeIcon": "material-symbols:event-repeat-outline-rounded",
-					"maxIteration": "",
-					"maxIterationVariableName": "",
+					"maxIteration": "4",
+					"maxIterationVariableName": "maxSMS",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "",
+					"displayName": "Valid sms OTP check",
 					"hasComment": true,
 					"comment": ""
 				}
@@ -1500,7 +1500,8 @@
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": true
 		},
 		{
 			"id": "logNode-0a19aeda-6057-4f1d-ad3b-fc8d4139c003",
