@@ -15,7 +15,7 @@ public abstract class NewPasswordService {
 
     public abstract boolean isPhoneUnique(String username, String phone);
 
-    public abstract boolean markPhoneAsVerified(String username, String phone);
+    public abstract String markPhoneAsVerified(String username, String phone);
 
     public abstract boolean sendOTPCode(String username, String phone);
 
