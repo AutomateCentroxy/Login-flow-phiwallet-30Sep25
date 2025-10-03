@@ -10,6 +10,8 @@ public abstract class NewPasswordService {
     public abstract boolean validate(String username, String password);
 
     public abstract String lockAccount(String username);
+    
+    public abstract boolean isPhoneUnique(String username, String phone);
 
     public abstract boolean isPhoneUnique(String username, String phone);
 
