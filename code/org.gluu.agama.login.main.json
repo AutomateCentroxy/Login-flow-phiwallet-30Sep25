@@ -951,7 +951,13 @@
 				"previousNodeId": "whenNode-3947e449-5b4a-4fdf-8b35-ed1517ca9f9c",
 				"branching": "success",
 				"agamaData": {
-					"assignments": [],
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "\"User already have phone number\"",
+							"assignedVariableName": "uiFeedback.infoMessage"
+						}
+					],
 					"nodeIcon": "material-symbols:equal",
 					"nodeColor": "",
 					"titleColor": "",
@@ -964,7 +970,8 @@
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": true
 		},
 		{
 			"id": "logNode-2828ed25-a297-4a24-a2fe-0f4c895ba340",
@@ -994,8 +1001,8 @@
 				}
 			},
 			"measured": {
-				"width": 170,
-				"height": 122
+				"width": 168,
+				"height": 120
 			}
 		},
 		{
