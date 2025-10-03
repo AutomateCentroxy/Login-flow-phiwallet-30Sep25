@@ -74,7 +74,7 @@ Repeat 6 times max
                                         // Add log entry withvalidation result in log file.
                                         Log "@info OTP validation result is:" otpValidationResult
                                         When otpValidationResult is true
-                                             Log "@ " __________
+                                             Log "@info OTP validated Successfully"
                                              Call __________#__________ 
                                         Otherwise
                                              // The maximum number of attempt has been reached.
@@ -104,5 +104,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_phexg = {success:false, error: "Password validation failed!"}
-Finish it_phexg
+it_cfavn = {success:false, error: "Password validation failed!"}
+Finish it_cfavn
