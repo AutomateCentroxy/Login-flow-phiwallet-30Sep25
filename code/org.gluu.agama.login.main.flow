@@ -52,7 +52,7 @@ Repeat 6 times max
                               // The OTP Code has been send to user.
                               Log "@info OTP generated and send to: " phone
                               otpValidationResult = false
-                              Repeat __________ times max
+                              maxSMS = Repeat 4 times max
                               Log "@ " __________
                               Finish __________
                          Otherwise
@@ -74,5 +74,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_rzlgb = {success:false, error: "Password validation failed!"}
-Finish it_rzlgb
+it_zzxyv = {success:false, error: "Password validation failed!"}
+Finish it_zzxyv
