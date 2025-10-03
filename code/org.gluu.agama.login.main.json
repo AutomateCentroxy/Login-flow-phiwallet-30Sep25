@@ -1190,7 +1190,7 @@
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "",
+					"comment": " Show UI to collect Mobile number from user.",
 					"arguments": "validationService"
 				}
 			},
