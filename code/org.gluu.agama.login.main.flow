@@ -43,6 +43,7 @@ Repeat 6 times max
                Otherwise
                     //  Show UI to collect Mobile number from user.
                     phoneInput = RRF "InputMobileNumber.ftlh" validationService
+                    phone = phoneInput.phoneNumber
           // Invalid credentials provided.
           Log "@error Invalid credentials provided"
           When conf.enableLock is true
@@ -57,5 +58,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_mkmnh = {success:false, error: "Password validation failed!"}
-Finish it_mkmnh
+it_ijncx = {success:false, error: "Password validation failed!"}
+Finish it_ijncx
