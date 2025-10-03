@@ -32,8 +32,6 @@ Repeat 6 times max
           When uiFeedback.succeed is true
                // add entry in log file for successfull login attempt.
                Log "@info Valid credentials provided"
-               // Password validation completed successfuly!
-               Finish credentials.username
           // Invalid credentials provided.
           Log "@error Invalid credentials provided"
           When conf.enableLock is true
@@ -48,5 +46,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_zgmqi = {success:false, error: "Password validation failed!"}
-Finish it_zgmqi
+it_acskt = {success:false, error: "Password validation failed!"}
+Finish it_acskt
