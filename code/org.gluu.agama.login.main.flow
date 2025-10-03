@@ -45,6 +45,7 @@ Repeat 6 times max
                     ValidMobileNum = Repeat 3 times max
                          //  Show UI to collect Mobile number from user.
                          phoneInput = RRF "InputMobileNumber.ftlh" validationService
+                         phone = phoneInput.phoneNumber
                          validNumber = Call validationService isPhoneUnique credentials.username phone
                          When validNumber is ture
                               // sent sms otp
@@ -66,5 +67,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_wcpyd = {success:false, error: "Password validation failed!"}
-Finish it_wcpyd
+it_kqdrn = {success:false, error: "Password validation failed!"}
+Finish it_kqdrn
