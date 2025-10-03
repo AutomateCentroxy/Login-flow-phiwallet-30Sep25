@@ -1049,47 +1049,11 @@
 			"selected": false
 		},
 		{
-			"id": "rrfNode-765f790f-a7e9-46cd-92aa-bf3f5a448e48",
-			"type": "rrfNode",
-			"position": {
-				"x": 2649.510733809154,
-				"y": 675.2499297408301
-			},
-			"data": {
-				"id": "rrfNode-765f790f-a7e9-46cd-92aa-bf3f5a448e48",
-				"type": "rrfNode",
-				"position": {
-					"x": 2649.510733809154,
-					"y": 675.2499297408301
-				},
-				"previousNodeId": "whenNode-3947e449-5b4a-4fdf-8b35-ed1517ca9f9c",
-				"branching": "otherwise",
-				"agamaData": {
-					"assignments": [],
-					"nodeIcon": "ph:globe-simple",
-					"templatePath": "InputMobileNumber.ftlh",
-					"asssignedVariableName": "phoneInput",
-					"nodeColor": "",
-					"titleColor": "",
-					"descColor": "",
-					"displayName": "RRF",
-					"hasComment": true,
-					"comment": " Show UI to collect Mobile number from user.",
-					"arguments": "validationService"
-				}
-			},
-			"measured": {
-				"width": 170,
-				"height": 122
-			},
-			"selected": false
-		},
-		{
 			"id": "assignmentNode-2f7bc226-3376-4c1f-b95e-0c359ca6a7b9",
 			"type": "assignmentNode",
 			"position": {
-				"x": 2899.510733809154,
-				"y": 675.2499297408301
+				"x": 2735.510733809154,
+				"y": 669.2499297408301
 			},
 			"data": {
 				"id": "assignmentNode-2f7bc226-3376-4c1f-b95e-0c359ca6a7b9",
@@ -1098,7 +1062,7 @@
 					"x": 2899.510733809154,
 					"y": 675.2499297408301
 				},
-				"previousNodeId": "rrfNode-765f790f-a7e9-46cd-92aa-bf3f5a448e48",
+				"previousNodeId": "whenNode-3947e449-5b4a-4fdf-8b35-ed1517ca9f9c",
 				"agamaData": {
 					"assignments": [
 						{
@@ -1114,13 +1078,14 @@
 					"displayName": "phone",
 					"hasComment": true,
 					"comment": ""
-				}
+				},
+				"branching": "otherwise"
 			},
 			"measured": {
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1729,44 +1694,6 @@
 			"sourceHandle": "source_logNode-2828ed25-a297-4a24-a2fe-0f4c895ba340"
 		},
 		{
-			"id": "whenNode-3947e449-5b4a-4fdf-8b35-ed1517ca9f9c-rrfNode-765f790f-a7e9-46cd-92aa-bf3f5a448e48",
-			"type": "default",
-			"source": "whenNode-3947e449-5b4a-4fdf-8b35-ed1517ca9f9c",
-			"target": "rrfNode-765f790f-a7e9-46cd-92aa-bf3f5a448e48",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "otherwise",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_whenNode-3947e449-5b4a-4fdf-8b35-ed1517ca9f9c_otherwise"
-		},
-		{
-			"id": "rrfNode-765f790f-a7e9-46cd-92aa-bf3f5a448e48-assignmentNode-2f7bc226-3376-4c1f-b95e-0c359ca6a7b9",
-			"type": "default",
-			"source": "rrfNode-765f790f-a7e9-46cd-92aa-bf3f5a448e48",
-			"target": "assignmentNode-2f7bc226-3376-4c1f-b95e-0c359ca6a7b9",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_rrfNode-765f790f-a7e9-46cd-92aa-bf3f5a448e48"
-		},
-		{
 			"id": "assignmentNode-2f7bc226-3376-4c1f-b95e-0c359ca6a7b9-repeatNode-d4595f00-7930-4770-9623-0545ad93523b",
 			"type": "default",
 			"source": "assignmentNode-2f7bc226-3376-4c1f-b95e-0c359ca6a7b9",
@@ -1784,11 +1711,29 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_assignmentNode-2f7bc226-3376-4c1f-b95e-0c359ca6a7b9"
+		},
+		{
+			"source": "whenNode-3947e449-5b4a-4fdf-8b35-ed1517ca9f9c",
+			"sourceHandle": "source_whenNode-3947e449-5b4a-4fdf-8b35-ed1517ca9f9c_otherwise",
+			"target": "assignmentNode-2f7bc226-3376-4c1f-b95e-0c359ca6a7b9",
+			"targetHandle": "target_assignmentNode-2f7bc226-3376-4c1f-b95e-0c359ca6a7b9",
+			"label": "otherwise",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"id": "xy-edge__whenNode-3947e449-5b4a-4fdf-8b35-ed1517ca9f9csource_whenNode-3947e449-5b4a-4fdf-8b35-ed1517ca9f9c_otherwise-assignmentNode-2f7bc226-3376-4c1f-b95e-0c359ca6a7b9target_assignmentNode-2f7bc226-3376-4c1f-b95e-0c359ca6a7b9"
 		}
 	],
 	"viewport": {
-		"x": -2275.465818134484,
-		"y": -444.4277812525497,
+		"x": -2146.995792327716,
+		"y": -580.2420956018757,
 		"zoom": 1
 	}
 }
