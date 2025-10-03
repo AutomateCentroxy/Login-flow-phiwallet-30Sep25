@@ -939,7 +939,7 @@
 				"width": 110,
 				"height": 60
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "assignmentNode-891ceed3-cd23-4edc-a2de-2a316cdb14cd",
@@ -1049,15 +1049,15 @@
 			"selected": false
 		},
 		{
-			"id": "callNode-1b945d53-37fb-4b1b-816f-ce44f053fb70",
-			"type": "callNode",
+			"id": "rrfNode-765f790f-a7e9-46cd-92aa-bf3f5a448e48",
+			"type": "rrfNode",
 			"position": {
 				"x": 2649.510733809154,
 				"y": 675.2499297408301
 			},
 			"data": {
-				"id": "callNode-1b945d53-37fb-4b1b-816f-ce44f053fb70",
-				"type": "callNode",
+				"id": "rrfNode-765f790f-a7e9-46cd-92aa-bf3f5a448e48",
+				"type": "rrfNode",
 				"position": {
 					"x": 2649.510733809154,
 					"y": 675.2499297408301
@@ -1065,25 +1065,24 @@
 				"previousNodeId": "whenNode-3947e449-5b4a-4fdf-8b35-ed1517ca9f9c",
 				"branching": "otherwise",
 				"agamaData": {
-					"javaClassName": "",
-					"javaMethodName": "",
-					"javaVariableName": "",
-					"exceptionVariableField": "",
-					"callType": "Call static method",
-					"arguments": [],
-					"nodeIcon": "material-symbols:code",
+					"assignments": [],
+					"nodeIcon": "ph:globe-simple",
+					"templatePath": "InputMobileNumber.ftlh",
+					"asssignedVariableName": "phoneInput",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "",
+					"displayName": "RRF",
 					"hasComment": true,
-					"comment": ""
+					"comment": " Show UI to collect Mobile number from user.",
+					"arguments": "validationService"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -1616,10 +1615,10 @@
 			"sourceHandle": "source_logNode-2828ed25-a297-4a24-a2fe-0f4c895ba340"
 		},
 		{
-			"id": "whenNode-3947e449-5b4a-4fdf-8b35-ed1517ca9f9c-callNode-1b945d53-37fb-4b1b-816f-ce44f053fb70",
+			"id": "whenNode-3947e449-5b4a-4fdf-8b35-ed1517ca9f9c-rrfNode-765f790f-a7e9-46cd-92aa-bf3f5a448e48",
 			"type": "default",
 			"source": "whenNode-3947e449-5b4a-4fdf-8b35-ed1517ca9f9c",
-			"target": "callNode-1b945d53-37fb-4b1b-816f-ce44f053fb70",
+			"target": "rrfNode-765f790f-a7e9-46cd-92aa-bf3f5a448e48",
 			"labelBgPadding": [
 				8,
 				4
@@ -1636,8 +1635,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1559.275173659994,
-		"y": -450.4144021530776,
-		"zoom": 0.7412335049014176
+		"x": -1801.0161454063245,
+		"y": -506.2993391482727,
+		"zoom": 0.860949188338904
 	}
 }
