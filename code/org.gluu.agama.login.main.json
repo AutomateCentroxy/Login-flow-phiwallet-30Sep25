@@ -2099,7 +2099,7 @@
 				"width": 110,
 				"height": 60
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "logNode-21ff7617-5770-4322-9679-801c92f708a5",
@@ -2118,21 +2118,22 @@
 				"previousNodeId": "whenNode-62c78d6a-826d-43aa-ab0d-9adf60222a72",
 				"branching": "otherwise",
 				"agamaData": {
-					"logMessage": "",
-					"logLevel": "",
+					"logMessage": "\"Invalid code provided \"",
+					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "",
+					"displayName": "Log invalid code",
 					"hasComment": true,
-					"comment": ""
+					"comment": "The maximum number of attempt has been reached."
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": true
 		},
 		{
 			"id": "assignmentNode-949b51c5-d8fc-4268-ad54-4b5a7369258d",
@@ -2194,8 +2195,8 @@
 				}
 			},
 			"measured": {
-				"width": 170,
-				"height": 122
+				"width": 168,
+				"height": 120
 			}
 		},
 		{
@@ -3371,8 +3372,8 @@
 		}
 	],
 	"viewport": {
-		"x": -4682.785477118986,
-		"y": -903.9104560355267,
+		"x": -4700.785477118986,
+		"y": -800.9104560355267,
 		"zoom": 0.7834971869493407
 	}
 }
