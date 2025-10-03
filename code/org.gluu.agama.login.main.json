@@ -111,7 +111,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"data": {
@@ -148,7 +148,8 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false
+			"selected": false,
+			"dragging": false
 		},
 		{
 			"data": {
@@ -579,37 +580,6 @@
 			"position": {
 				"x": 1921.7266085396022,
 				"y": 796.5015512837648
-			},
-			"measured": {
-				"width": 170,
-				"height": 122
-			},
-			"selected": false,
-			"dragging": false
-		},
-		{
-			"data": {
-				"agamaData": {
-					"nodeIcon": "material-symbols:line-end-square-rounded",
-					"displayName": "Flow completed",
-					"hasComment": true,
-					"comment": "Password validation completed successfuly!",
-					"returnVariable": "credentials.username",
-					"finishMode": "withVariable"
-				},
-				"id": "finishNode-91a948c1-0158-49cd-9051-fac022e1f04b",
-				"type": "finishNode",
-				"position": {
-					"x": 2800,
-					"y": 700
-				},
-				"previousNodeId": "logNode-94145dd6-3a9c-4075-a5ad-fb54e52fc131"
-			},
-			"type": "finishNode",
-			"id": "finishNode-91a948c1-0158-49cd-9051-fac022e1f04b",
-			"position": {
-				"x": 2201.9253735715324,
-				"y": 822.9800468358951
 			},
 			"measured": {
 				"width": 170,
@@ -1139,25 +1109,6 @@
 			"sourceHandle": "source_whenNode-6bb9b4c5-92d3-4257-8f41-1557fb24648e_success"
 		},
 		{
-			"id": "logNode-94145dd6-3a9c-4075-a5ad-fb54e52fc131-finishNode-91a948c1-0158-49cd-9051-fac022e1f04b",
-			"type": "default",
-			"source": "logNode-94145dd6-3a9c-4075-a5ad-fb54e52fc131",
-			"target": "finishNode-91a948c1-0158-49cd-9051-fac022e1f04b",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_logNode-94145dd6-3a9c-4075-a5ad-fb54e52fc131"
-		},
-		{
 			"source": "whenNode-84730b3c-0e8b-4859-ac01-99fd3fc7f476",
 			"sourceHandle": "source_whenNode-84730b3c-0e8b-4859-ac01-99fd3fc7f476_success",
 			"target": "callNode-0ae7b2de-3a3c-41f8-b09b-7a3dde4e12a9",
@@ -1345,8 +1296,8 @@
 		}
 	],
 	"viewport": {
-		"x": -6.483060391996446,
-		"y": -91.18986202628747,
-		"zoom": 0.860949188338904
+		"x": -2419.5935354674575,
+		"y": -840.4291264944529,
+		"zoom": 1.3491025343396987
 	}
 }
