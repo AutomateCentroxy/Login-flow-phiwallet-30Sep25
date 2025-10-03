@@ -1763,7 +1763,8 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false
+			"selected": false,
+			"dragging": false
 		},
 		{
 			"id": "logNode-ca78eb11-2b1f-4d74-a683-ed2e7c312ce7",
@@ -2205,7 +2206,7 @@
 				"width": 168,
 				"height": 120
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "callNode-1d2f389c-bd60-4956-9473-0327e4ed8e4a",
@@ -2224,24 +2225,29 @@
 				"previousNodeId": "logNode-f3c8f303-7841-4234-9b15-0880746d27a9",
 				"agamaData": {
 					"javaClassName": "",
-					"javaMethodName": "",
-					"javaVariableName": "",
+					"javaMethodName": "markPhoneAsVerified",
+					"javaVariableName": "validationService",
 					"exceptionVariableField": "",
-					"callType": "Call static method",
-					"arguments": [],
+					"callType": "Call method on instance",
+					"arguments": [
+						"phone",
+						"credentials.username"
+					],
 					"nodeIcon": "material-symbols:code",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "",
+					"displayName": "PhonenumberUpdated",
 					"hasComment": true,
-					"comment": ""
+					"comment": "",
+					"asssignedVariableName": "PhonenumberUpdated"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -3380,8 +3386,8 @@
 		}
 	],
 	"viewport": {
-		"x": -4738.785477118986,
-		"y": -873.9104560355267,
+		"x": -4884.785477118987,
+		"y": -1092.9104560355267,
 		"zoom": 0.7834971869493407
 	}
 }
