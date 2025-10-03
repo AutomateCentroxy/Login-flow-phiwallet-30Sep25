@@ -35,7 +35,9 @@ Repeat 6 times max
                // Phone verified attribute check
                phoneVerified = Call validationService isPhoneVerified credentials.username
                When 
+                    // User already have the phone number
                     uiFeedback.infoMessage = "User already have phone number"
+                    // "User already have the phone number"
                     Log "@info User already have the phone number"
                     Finish __________
           // Invalid credentials provided.
@@ -52,5 +54,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_iuvja = {success:false, error: "Password validation failed!"}
-Finish it_iuvja
+it_vawok = {success:false, error: "Password validation failed!"}
+Finish it_vawok
