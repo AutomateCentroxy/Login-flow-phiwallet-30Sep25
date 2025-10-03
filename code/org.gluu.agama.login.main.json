@@ -1111,7 +1111,7 @@
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "",
+					"displayName": "phone",
 					"hasComment": true,
 					"comment": ""
 				}
@@ -1120,7 +1120,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "callNode-1698e86a-9a35-474c-90fa-a041d64ea405",
@@ -1161,7 +1161,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true
+			"selected": false
 		}
 	],
 	"edges": [
@@ -1752,8 +1752,8 @@
 		}
 	],
 	"viewport": {
-		"x": -3707.5241428932386,
-		"y": -766.348658553997,
-		"zoom": 1.3491025343396987
+		"x": -2580.889992286283,
+		"y": -549.4287058274729,
+		"zoom": 1
 	}
 }
