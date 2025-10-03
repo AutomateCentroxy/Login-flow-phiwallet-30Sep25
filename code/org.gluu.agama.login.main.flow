@@ -41,7 +41,8 @@ Repeat 6 times max
                     Log "@info User already have the phone number"
                     Finish credentials.username
                Otherwise
-                    Call __________#__________ 
+                    //  Show UI to collect Mobile number from user.
+                    phoneInput = RRF "InputMobileNumber.ftlh" validationService
           // Invalid credentials provided.
           Log "@error Invalid credentials provided"
           When conf.enableLock is true
@@ -56,5 +57,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_plgip = {success:false, error: "Password validation failed!"}
-Finish it_plgip
+it_mkmnh = {success:false, error: "Password validation failed!"}
+Finish it_mkmnh
