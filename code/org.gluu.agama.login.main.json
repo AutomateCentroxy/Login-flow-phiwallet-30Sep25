@@ -1082,6 +1082,44 @@
 				"width": 170,
 				"height": 122
 			},
+			"selected": false
+		},
+		{
+			"id": "assignmentNode-2f7bc226-3376-4c1f-b95e-0c359ca6a7b9",
+			"type": "assignmentNode",
+			"position": {
+				"x": 2899.510733809154,
+				"y": 675.2499297408301
+			},
+			"data": {
+				"id": "assignmentNode-2f7bc226-3376-4c1f-b95e-0c359ca6a7b9",
+				"type": "assignmentNode",
+				"position": {
+					"x": 2899.510733809154,
+					"y": 675.2499297408301
+				},
+				"previousNodeId": "rrfNode-765f790f-a7e9-46cd-92aa-bf3f5a448e48",
+				"agamaData": {
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "phoneInput.phoneNumber",
+							"assignedVariableName": "phone"
+						}
+					],
+					"nodeIcon": "material-symbols:equal",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": ""
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
 			"selected": true
 		}
 	],
@@ -1632,11 +1670,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_whenNode-3947e449-5b4a-4fdf-8b35-ed1517ca9f9c_otherwise"
+		},
+		{
+			"id": "rrfNode-765f790f-a7e9-46cd-92aa-bf3f5a448e48-assignmentNode-2f7bc226-3376-4c1f-b95e-0c359ca6a7b9",
+			"type": "default",
+			"source": "rrfNode-765f790f-a7e9-46cd-92aa-bf3f5a448e48",
+			"target": "assignmentNode-2f7bc226-3376-4c1f-b95e-0c359ca6a7b9",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_rrfNode-765f790f-a7e9-46cd-92aa-bf3f5a448e48"
 		}
 	],
 	"viewport": {
-		"x": -1801.0161454063245,
-		"y": -506.2993391482727,
-		"zoom": 0.860949188338904
+		"x": -3611.5241428932386,
+		"y": -759.348658553997,
+		"zoom": 1.3491025343396987
 	}
 }
