@@ -1359,7 +1359,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1398,6 +1398,39 @@
 			},
 			"selected": false,
 			"dragging": false
+		},
+		{
+			"id": "logNode-87fd9263-95a2-481a-b0f7-b5ea15f0c27b",
+			"type": "logNode",
+			"position": {
+				"x": 4318.80195897269,
+				"y": 1137.5571001135634
+			},
+			"data": {
+				"id": "logNode-87fd9263-95a2-481a-b0f7-b5ea15f0c27b",
+				"type": "logNode",
+				"position": {
+					"x": 4318.80195897269,
+					"y": 1137.5571001135634
+				},
+				"previousNodeId": "callNode-272acd1e-d482-47e2-a896-481fc469bb18",
+				"agamaData": {
+					"logMessage": "\"OTP generated and send to: \" phone",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "OTP code send",
+					"hasComment": true,
+					"comment": "The OTP Code has been send to user."
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -2096,11 +2129,30 @@
 				"fillOpacity": 0.7
 			},
 			"id": "xy-edge__rrfNode-79494f0f-5b8c-4684-bcb4-2aaf20985f1bsource_rrfNode-79494f0f-5b8c-4684-bcb4-2aaf20985f1b-assignmentNode-efb4c742-925e-45b5-8d54-19bd43b674e8target_assignmentNode-efb4c742-925e-45b5-8d54-19bd43b674e8"
+		},
+		{
+			"id": "callNode-272acd1e-d482-47e2-a896-481fc469bb18-logNode-87fd9263-95a2-481a-b0f7-b5ea15f0c27b",
+			"type": "default",
+			"source": "callNode-272acd1e-d482-47e2-a896-481fc469bb18",
+			"target": "logNode-87fd9263-95a2-481a-b0f7-b5ea15f0c27b",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_callNode-272acd1e-d482-47e2-a896-481fc469bb18"
 		}
 	],
 	"viewport": {
-		"x": -2735.974599469253,
-		"y": -523.8005484420632,
+		"x": -3166.9745994692535,
+		"y": -579.8005484420634,
 		"zoom": 0.860949188338904
 	}
 }
