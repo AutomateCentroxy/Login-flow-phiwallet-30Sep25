@@ -1830,7 +1830,7 @@
 				"width": 168,
 				"height": 120
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "callNode-912743e3-7fc6-47f0-880a-5de053d2b7a5",
@@ -1849,24 +1849,29 @@
 				"previousNodeId": "logNode-54815b61-f359-4bc8-86a3-655a9f2d1808",
 				"agamaData": {
 					"javaClassName": "",
-					"javaMethodName": "",
-					"javaVariableName": "",
+					"javaMethodName": "sendOTPCode",
+					"javaVariableName": "otpValidationResult",
 					"exceptionVariableField": "",
-					"callType": "Call static method",
-					"arguments": [],
+					"callType": "Call method on instance",
+					"arguments": [
+						"phone",
+						"credentials.username"
+					],
 					"nodeIcon": "material-symbols:code",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
-					"displayName": "",
+					"displayName": "Resend otp",
 					"hasComment": true,
-					"comment": ""
+					"comment": "Resend otp",
+					"asssignedVariableName": "resendHasSucceed"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 122
-			}
+			},
+			"selected": true
 		},
 		{
 			"id": "whenNode-cd397aac-da52-49e3-b81f-6ed1113594ba",
@@ -3072,8 +3077,8 @@
 		}
 	],
 	"viewport": {
-		"x": -3520.4085910361027,
-		"y": -901.158875704702,
+		"x": -3119.4085910361027,
+		"y": -860.158875704702,
 		"zoom": 0.6745512671698494
 	}
 }
