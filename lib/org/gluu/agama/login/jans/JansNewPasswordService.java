@@ -131,7 +131,7 @@ public class JansNewPasswordService extends NewPasswordService {
             logger.error("Error checking phone verification for {}: {}", username, e.getMessage(), e);
             return false;
         }
-}
+    }
 
     public boolean isPhoneUnique(String username, String phone) {
         try {
