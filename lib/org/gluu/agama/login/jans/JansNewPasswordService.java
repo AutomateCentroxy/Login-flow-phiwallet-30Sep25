@@ -29,6 +29,7 @@ public class JansNewPasswordService extends NewPasswordService {
     public static final String CACHE_PREFIX = "lock_user_";
     private static final String PHONE_VERIFIED = "phoneNumberVerified";
     private static final int OTP_LENGTH = 6;
+    private static final int OTP_CODE_LENGTH = 6;
     private static AuthenticationService authenticationService = CdiUtil.bean(AuthenticationService.class);
     private static UserService userService = CdiUtil.bean(UserService.class);
     private static CacheService cacheService = CdiUtil.bean(CacheService.class);
@@ -179,6 +180,7 @@ public class JansNewPasswordService extends NewPasswordService {
         } catch (Exception e) {
             logger.error("Error marking phone verified for {}: {}", username, e.getMessage(), e);
             return "Error: " + e.getMessage();
+        }
     }
 
     private String generateSMSOtpCode(int codeLength) {
