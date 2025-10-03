@@ -585,7 +585,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -858,6 +858,46 @@
 			},
 			"selected": false,
 			"dragging": false
+		},
+		{
+			"id": "callNode-8e825aa3-ba23-40eb-9b76-73b6cb4cc163",
+			"type": "callNode",
+			"position": {
+				"x": 2149.510733809154,
+				"y": 867.2499297408301
+			},
+			"data": {
+				"id": "callNode-8e825aa3-ba23-40eb-9b76-73b6cb4cc163",
+				"type": "callNode",
+				"position": {
+					"x": 2149.510733809154,
+					"y": 867.2499297408301
+				},
+				"previousNodeId": "logNode-94145dd6-3a9c-4075-a5ad-fb54e52fc131",
+				"agamaData": {
+					"javaClassName": "",
+					"javaMethodName": "isPhoneVerified",
+					"javaVariableName": "validationService",
+					"exceptionVariableField": "",
+					"callType": "Call method on instance",
+					"arguments": [
+						"credentials.username"
+					],
+					"nodeIcon": "material-symbols:code",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "hasPhoneVerified",
+					"hasComment": true,
+					"comment": "Phone verified attribute check",
+					"asssignedVariableName": "phoneVerified"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -1293,11 +1333,30 @@
 			},
 			"sourceHandle": "source_logNode-1ec9205b-6578-489f-9733-3d83cc492ddd",
 			"targetHandle": "target_finishNode-4f56a008-ed5a-46e1-a524-091c06683e06"
+		},
+		{
+			"id": "logNode-94145dd6-3a9c-4075-a5ad-fb54e52fc131-callNode-8e825aa3-ba23-40eb-9b76-73b6cb4cc163",
+			"type": "default",
+			"source": "logNode-94145dd6-3a9c-4075-a5ad-fb54e52fc131",
+			"target": "callNode-8e825aa3-ba23-40eb-9b76-73b6cb4cc163",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_logNode-94145dd6-3a9c-4075-a5ad-fb54e52fc131"
 		}
 	],
 	"viewport": {
-		"x": -315.4029421758951,
-		"y": -119.51420532890847,
-		"zoom": 0.5
+		"x": -1762.068968372916,
+		"y": -590.9087301559966,
+		"zoom": 1
 	}
 }
