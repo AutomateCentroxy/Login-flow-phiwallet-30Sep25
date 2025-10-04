@@ -105,64 +105,67 @@ public class JansNewResetService extends NewResetService{
     
     @Override
     public String sendEmail(String to) {
-        String  userLang = null; 
-        User user = getUser(MAIL, to);
-        LogUtils.log("User is: %", user);
+        try {
+            String userLang = null; 
+            User user = getUser(MAIL, to);
+            LogUtils.log("User is: %", user);
 
-        userLang= getSingleValuedAttr(user, LANG);
-        if (userLang == null || userLang.isBlank()){
-            userLang = getSingleValuedAttr(user, LOCALE);
-        }
-                        
-        String preferredLang = (userLang != null && !userLang.isEmpty())
-                ? userLang.toLowerCase()
-                : "en";
+            userLang = getSingleValuedAttr(user, LANG);
+            if (userLang == null || userLang.isBlank()) {
+                userLang = getSingleValuedAttr(user, LOCALE);
+            }
 
-        LogUtils.log("Final language used: %", preferredLang);
+            String preferredLang = (userLang != null && !userLang.isEmpty())
+                    ? userLang.toLowerCase()
+                    : "en";
 
-        String otp = IntStream.range(0, OTP_LENGTH)
-                .mapToObj(i -> String.valueOf(RAND.nextInt(10)))
-                .collect(Collectors.joining());
+            LogUtils.log("Final language used: %", preferredLang);
 
-        // Pick localized email template
-        Map<String, String> templateData;
-        switch (preferredLang) {
-            case "ar":
-                templateData = EmailResetOtpAr.get(otp);
-                break;
-            case "es":
-                templateData = EmailResetOtpEs.get(otp);
-                break;
-            case "fr":
-                templateData = EmailResetOtpFr.get(otp);
-                break;
-            case "id":
-                templateData = EmailResetOtpId.get(otp);
-                break;
-            case "pt":
-                templateData = EmailResetOtpPt.get(otp);
-                break;
-            default:
-                templateData = EmailResetOtpEn.get(otp);
-                break;
-        }
+            // Generate OTP
+            String otp = IntStream.range(0, OTP_LENGTH)
+                    .mapToObj(i -> String.valueOf(RAND.nextInt(10)))
+                    .collect(Collectors.joining());
 
-        String subject = templateData.get("subject");
-        String htmlBody = templateData.get("body");
-        String textBody = htmlBody.replaceAll("\\<.*?\\>", "");
+            // Pick localized email template
+            Map<String, String> templateData;
+            switch (preferredLang) {
+                case "ar":
+                    templateData = EmailResetOtpAr.get(otp);
+                    break;
+                case "es":
+                    templateData = EmailResetOtpEs.get(otp);
+                    break;
+                case "fr":
+                    templateData = EmailResetOtpFr.get(otp);
+                    break;
+                case "id":
+                    templateData = EmailResetOtpId.get(otp);
+                    break;
+                case "pt":
+                    templateData = EmailResetOtpPt.get(otp);
+                    break;
+                default:
+                    templateData = EmailResetOtpEn.get(otp);
+                    break;
+            }
 
-        SmtpConfiguration smtpConfiguration = getSmtpConfiguration();
+            String subject = templateData.get("subject");
+            String htmlBody = templateData.get("body");
+            String textBody = htmlBody.replaceAll("\\<.*?\\>", "");
 
-        // Send signed email
-        MailService mailService = CdiUtil.bean(MailService.class);
-        boolean sent = mailService.sendMailSigned(
-                    smtpConfig.getFromEmailAddress(),
-                    smtpConfig.getFromName(),
+            SmtpConfiguration smtpConfiguration = getSmtpConfiguration();
+
+            // Send signed email
+            MailService mailService = CdiUtil.bean(MailService.class);
+            boolean sent = mailService.sendMailSigned(
+                    smtpConfiguration.getFromEmailAddress(),
+                    smtpConfiguration.getFromName(),
                     to,
                     null,
                     subject,
                     textBody,
-                    htmlBody);
+                    htmlBody
+            );
 
             if (sent) {
                 LogUtils.log("Localized OTP email sent successfully to %", to);
@@ -170,9 +173,11 @@ public class JansNewResetService extends NewResetService{
             } else {
                 LogUtils.log("Failed to send localized OTP email to %", to);
                 return null;
-            } catch (Exception e) {
-                LogUtils.log("Failed to send OTP email: %", e.getMessage());
-                return null;
+            }
+
+        } catch (Exception e) {
+            LogUtils.log("Failed to send OTP email: %", e.getMessage());
+            return null;
         }
     } 
 
