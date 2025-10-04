@@ -2437,8 +2437,49 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
+		},
+		{
+			"id": "callNode-dbc3f597-82f3-4381-a1c5-9be15ea4a697",
+			"type": "callNode",
+			"position": {
+				"x": 4922.305312078039,
+				"y": 814.4636163516518
+			},
+			"data": {
+				"id": "callNode-dbc3f597-82f3-4381-a1c5-9be15ea4a697",
+				"type": "callNode",
+				"position": {
+					"x": 4922.305312078039,
+					"y": 814.4636163516518
+				},
+				"previousNodeId": "rrfNode-bcaedca3-88fc-4bef-aa53-4806db2a1bb0",
+				"agamaData": {
+					"javaClassName": "",
+					"javaMethodName": "isPhoneUnique",
+					"javaVariableName": "validationService",
+					"exceptionVariableField": "",
+					"callType": "Call method on instance",
+					"arguments": [
+						"credentials.username",
+						"phone"
+					],
+					"nodeIcon": "material-symbols:code",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "Again enter the new number",
+					"hasComment": true,
+					"comment": "",
+					"asssignedVariableName": "ValidNumber"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -3668,11 +3709,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_logNode-5f31554c-bcf4-4b2d-b39c-add83cc27343"
+		},
+		{
+			"id": "rrfNode-bcaedca3-88fc-4bef-aa53-4806db2a1bb0-callNode-dbc3f597-82f3-4381-a1c5-9be15ea4a697",
+			"type": "default",
+			"source": "rrfNode-bcaedca3-88fc-4bef-aa53-4806db2a1bb0",
+			"target": "callNode-dbc3f597-82f3-4381-a1c5-9be15ea4a697",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_rrfNode-bcaedca3-88fc-4bef-aa53-4806db2a1bb0"
 		}
 	],
 	"viewport": {
-		"x": -2815.858962917375,
-		"y": -426.22289641388284,
+		"x": -3084.858962917375,
+		"y": -563.2228964138828,
 		"zoom": 0.7834971869493407
 	}
 }
