@@ -14,6 +14,7 @@ import io.jans.agama.engine.script.LogUtils;
 
 import java.security.SecureRandom;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import com.twilio.Twilio;
@@ -138,17 +139,26 @@ public class JansNewPasswordService extends NewPasswordService {
 
     public boolean isPhoneUnique(String username, String phone) {
         try {
-            User existing = userService.getUserByAttribute("PHONE_NUMBER", phone);
-            // If another user already has this phone → not unique
-            return existing == null || existing.getUserId().equalsIgnoreCase(username);
+            List<User> users = userService.getUsersByAttribute("PHONE_NUMBER", phone);
+            if (users == null || users.isEmpty()) {
+                return true; // unique: no one has this phone
+            }
+
+            for (User u : users) {
+                if (!u.getUserId().equalsIgnoreCase(username)) {
+                    // Another user already has this phone
+                    return false;
+                }
+            }
+
+            // Only current user has this phone
+            return true;
+
         } catch (Exception e) {
             logger.error("Error checking phone uniqueness for {}: {}", phone, e.getMessage(), e);
             return false;
         }
     }
-
-
-
 
 
     public String getPhoneNumber(String username) {
