@@ -137,7 +137,7 @@ public class JansNewPasswordService extends NewPasswordService {
         }
     }
 
-    public boolean isPhoneDuplicate(String phone) {
+    public boolean isPhoneUnique(String phone) {
         try {
             List<User> users = userService.getUsersByAttribute("PHONE_NUMBER", phone);
 
