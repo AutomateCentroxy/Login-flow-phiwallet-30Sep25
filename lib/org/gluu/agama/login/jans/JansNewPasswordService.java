@@ -141,21 +141,22 @@ public class JansNewPasswordService extends NewPasswordService {
         try {
             List<User> users = userService.getUsersByAttribute("PHONE_NUMBER", phone);
             if (users == null || users.isEmpty()) {
-                return false; // unique: return false
+                return true; // unique: no one has this phone
             }
-    
+
             for (User u : users) {
                 if (!u.getUserId().equalsIgnoreCase(username)) {
                     // Another user already has this phone
-                    return true; // duplicate: return true
+                    return false;
                 }
             }
-    
+
             // Only current user has this phone
-            return false; // phone is unique for current user
+            return true;
+
         } catch (Exception e) {
             logger.error("Error checking phone uniqueness for {}: {}", phone, e.getMessage(), e);
-            return true; // safest to treat errors as duplicates
+            return false;
         }
     }
 
