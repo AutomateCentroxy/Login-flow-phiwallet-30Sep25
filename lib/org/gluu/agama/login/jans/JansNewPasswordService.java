@@ -137,30 +137,28 @@ public class JansNewPasswordService extends NewPasswordService {
         }
     }
 
-    public boolean isPhoneUnique(String phone) {
+    public boolean isPhoneUnique(String username, String phone) {
         try {
-            // Normalize phone number (remove non-digits)
-            phone = phone.replaceAll("[^0-9]", "");
+            // Normalize phone number
+            String normalizedPhone = phone.startsWith("+") ? phone : "+" + phone;
 
-            // Get all users with the same phone
-            // Assuming your getUsersByAttribute method works as intended
-            List<User> users = userService.getUsersByAttribute("mobile", phone, true, 10);
+            // Check DB for existing users
+            List<User> users = userService.getUsersByAttribute("mobile", normalizedPhone, true, 10);
 
-            // Check if any users were found
             if (users != null && !users.isEmpty()) {
-                // Found one or more existing users with this phone number
-                logger.info("Phone {} is NOT unique. Used by {} other user(s).", phone, users.size());
-                return false;
+                for (User u : users) {
+                    if (!u.getUserId().equalsIgnoreCase(username)) {
+                        logger.info("Phone {} is NOT unique. Already used by {}", phone, u.getUserId());
+                        return false; // duplicate
+                    }
+                }
             }
 
-            // No users found with this phone number
-            logger.info("Phone {} is unique (no existing user found)", phone);
+            logger.info("Phone {} is unique", phone);
             return true;
-
         } catch (Exception e) {
-            logger.error("Error checking phone uniqueness for {}: {}", phone, e.getMessage(), e);
-            // Safer: treat as non-unique in case of error during a new user sign-up
-            return false;
+            logger.error("Error checking phone uniqueness for {}", phone, e);
+            return false; // safest default on error
         }
     }
 
