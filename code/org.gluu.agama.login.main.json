@@ -1160,7 +1160,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -2347,7 +2347,7 @@
 					"conditionInputField": "",
 					"conditions": [
 						{
-							"variable": "ValidNumber",
+							"variable": "DuplicateNumber",
 							"operator": "is",
 							"dataValue": "false",
 							"combinator": "none"
@@ -2366,7 +2366,7 @@
 				"width": 110,
 				"height": 60
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
