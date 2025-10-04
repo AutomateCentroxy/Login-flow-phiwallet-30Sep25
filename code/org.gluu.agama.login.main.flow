@@ -97,7 +97,7 @@ Repeat 6 times max
                               uiFeedback.errorMessage = "This phone is already used by another account. Please enter a different one."
                               uiFeedback.infoMessage = "Please enter a new number"
                               // "This phone is already used by another account. Please enter a different one.
-                              Log "@info This phone is already used by another account. Please enter a different one."
+                              Log "@error This phone is already used by another account. Please enter a different one."
                     Log "@info Phone loop completed"
                     it_ValidMobileNum = { success: false, error: "ExceededTheNumberOfAttemptsAllowed" }
                     Finish it_ValidMobileNum
@@ -115,5 +115,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_fzrag = {success:false, error: "Password validation failed!"}
-Finish it_fzrag
+it_kphpb = {success:false, error: "Password validation failed!"}
+Finish it_kphpb
