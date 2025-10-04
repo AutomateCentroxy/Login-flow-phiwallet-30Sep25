@@ -52,6 +52,7 @@ Repeat 6 times max
                               // The OTP Code has been send to user.
                               Log "@info OTP generated and send to: " phone
                               otpValidationResult = false
+                              uiFeedback.infoMessage = "Otp send to the registered mobile number"
                               maxSMS = Repeat 4 times max
                                    //  Show UI to collect OTP code from user.
                                    otpCreds = RRF "otp.ftlh" uiFeedback
@@ -111,5 +112,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_yjgtz = {success:false, error: "Password validation failed!"}
-Finish it_yjgtz
+it_dfnmz = {success:false, error: "Password validation failed!"}
+Finish it_dfnmz
