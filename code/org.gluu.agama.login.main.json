@@ -2403,83 +2403,6 @@
 			},
 			"selected": false,
 			"dragging": false
-		},
-		{
-			"id": "rrfNode-bcaedca3-88fc-4bef-aa53-4806db2a1bb0",
-			"type": "rrfNode",
-			"position": {
-				"x": 4672.305312078039,
-				"y": 814.4636163516518
-			},
-			"data": {
-				"id": "rrfNode-bcaedca3-88fc-4bef-aa53-4806db2a1bb0",
-				"type": "rrfNode",
-				"position": {
-					"x": 4672.305312078039,
-					"y": 814.4636163516518
-				},
-				"previousNodeId": "logNode-5f31554c-bcf4-4b2d-b39c-add83cc27343",
-				"agamaData": {
-					"assignments": [],
-					"nodeIcon": "ph:globe-simple",
-					"templatePath": "InputMobileNumber.ftlh",
-					"asssignedVariableName": "InputNewMobileNumber",
-					"nodeColor": "",
-					"titleColor": "",
-					"descColor": "",
-					"displayName": "InputNewMobileNumber",
-					"hasComment": true,
-					"comment": "",
-					"arguments": "uiFeedback"
-				}
-			},
-			"measured": {
-				"width": 170,
-				"height": 122
-			},
-			"selected": false,
-			"dragging": false
-		},
-		{
-			"id": "callNode-dbc3f597-82f3-4381-a1c5-9be15ea4a697",
-			"type": "callNode",
-			"position": {
-				"x": 4922.305312078039,
-				"y": 814.4636163516518
-			},
-			"data": {
-				"id": "callNode-dbc3f597-82f3-4381-a1c5-9be15ea4a697",
-				"type": "callNode",
-				"position": {
-					"x": 4922.305312078039,
-					"y": 814.4636163516518
-				},
-				"previousNodeId": "rrfNode-bcaedca3-88fc-4bef-aa53-4806db2a1bb0",
-				"agamaData": {
-					"javaClassName": "",
-					"javaMethodName": "isPhoneUnique",
-					"javaVariableName": "validationService",
-					"exceptionVariableField": "",
-					"callType": "Call method on instance",
-					"arguments": [
-						"credentials.username",
-						"phone"
-					],
-					"nodeIcon": "material-symbols:code",
-					"nodeColor": "",
-					"titleColor": "",
-					"descColor": "",
-					"displayName": "Again enter the new number",
-					"hasComment": true,
-					"comment": "",
-					"asssignedVariableName": "ValidNumber"
-				}
-			},
-			"measured": {
-				"width": 170,
-				"height": 122
-			},
-			"selected": true
 		}
 	],
 	"edges": [
@@ -3690,49 +3613,11 @@
 				"fillOpacity": 0.7
 			},
 			"id": "xy-edge__whenNode-3c27252f-d74d-48a8-a19b-16415217cd27source_whenNode-3c27252f-d74d-48a8-a19b-16415217cd27_otherwise-assignmentNode-234c9b78-fd16-48a9-8fdc-57eef2db4eb2target_assignmentNode-234c9b78-fd16-48a9-8fdc-57eef2db4eb2"
-		},
-		{
-			"id": "logNode-5f31554c-bcf4-4b2d-b39c-add83cc27343-rrfNode-bcaedca3-88fc-4bef-aa53-4806db2a1bb0",
-			"type": "default",
-			"source": "logNode-5f31554c-bcf4-4b2d-b39c-add83cc27343",
-			"target": "rrfNode-bcaedca3-88fc-4bef-aa53-4806db2a1bb0",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_logNode-5f31554c-bcf4-4b2d-b39c-add83cc27343"
-		},
-		{
-			"id": "rrfNode-bcaedca3-88fc-4bef-aa53-4806db2a1bb0-callNode-dbc3f597-82f3-4381-a1c5-9be15ea4a697",
-			"type": "default",
-			"source": "rrfNode-bcaedca3-88fc-4bef-aa53-4806db2a1bb0",
-			"target": "callNode-dbc3f597-82f3-4381-a1c5-9be15ea4a697",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_rrfNode-bcaedca3-88fc-4bef-aa53-4806db2a1bb0"
 		}
 	],
 	"viewport": {
-		"x": -3084.858962917375,
-		"y": -563.2228964138828,
-		"zoom": 0.7834971869493407
+		"x": -3158.0224168057193,
+		"y": -551.0624204907424,
+		"zoom": 0.860949188338904
 	}
 }
