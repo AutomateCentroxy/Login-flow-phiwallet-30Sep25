@@ -1206,7 +1206,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -2402,6 +2402,42 @@
 				"height": 60
 			},
 			"selected": false,
+			"dragging": false
+		},
+		{
+			"id": "rrfNode-bcaedca3-88fc-4bef-aa53-4806db2a1bb0",
+			"type": "rrfNode",
+			"position": {
+				"x": 4672.305312078039,
+				"y": 814.4636163516518
+			},
+			"data": {
+				"id": "rrfNode-bcaedca3-88fc-4bef-aa53-4806db2a1bb0",
+				"type": "rrfNode",
+				"position": {
+					"x": 4672.305312078039,
+					"y": 814.4636163516518
+				},
+				"previousNodeId": "logNode-5f31554c-bcf4-4b2d-b39c-add83cc27343",
+				"agamaData": {
+					"assignments": [],
+					"nodeIcon": "ph:globe-simple",
+					"templatePath": "InputMobileNumber.ftlh",
+					"asssignedVariableName": "InputNewMobileNumber",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "InputNewMobileNumber",
+					"hasComment": true,
+					"comment": "",
+					"arguments": "uiFeedback"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
+			"selected": true,
 			"dragging": false
 		}
 	],
@@ -3613,11 +3649,30 @@
 				"fillOpacity": 0.7
 			},
 			"id": "xy-edge__whenNode-3c27252f-d74d-48a8-a19b-16415217cd27source_whenNode-3c27252f-d74d-48a8-a19b-16415217cd27_otherwise-assignmentNode-234c9b78-fd16-48a9-8fdc-57eef2db4eb2target_assignmentNode-234c9b78-fd16-48a9-8fdc-57eef2db4eb2"
+		},
+		{
+			"id": "logNode-5f31554c-bcf4-4b2d-b39c-add83cc27343-rrfNode-bcaedca3-88fc-4bef-aa53-4806db2a1bb0",
+			"type": "default",
+			"source": "logNode-5f31554c-bcf4-4b2d-b39c-add83cc27343",
+			"target": "rrfNode-bcaedca3-88fc-4bef-aa53-4806db2a1bb0",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_logNode-5f31554c-bcf4-4b2d-b39c-add83cc27343"
 		}
 	],
 	"viewport": {
-		"x": -2367.881827262434,
-		"y": -322.0070435751088,
-		"zoom": 0.6745512671698494
+		"x": -2815.858962917375,
+		"y": -426.22289641388284,
+		"zoom": 0.7834971869493407
 	}
 }
