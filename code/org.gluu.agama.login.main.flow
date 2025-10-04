@@ -112,5 +112,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_usxqn = {success:false, error: "Password validation failed!"}
-Finish it_usxqn
+it_izmyi = {success:false, error: "Password validation failed!"}
+Finish it_izmyi
