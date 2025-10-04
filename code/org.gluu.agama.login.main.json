@@ -1181,7 +1181,7 @@
 				"previousNodeId": "whenNode-3c27252f-d74d-48a8-a19b-16415217cd27",
 				"agamaData": {
 					"logMessage": "\"This phone is already used by another account. Please enter a different one.\"",
-					"logLevel": "error",
+					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
 					"titleColor": "",
@@ -1196,7 +1196,7 @@
 				"width": 170,
 				"height": 123
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -2507,7 +2507,7 @@
 				"width": 170,
 				"height": 123
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		}
 	],
