@@ -2083,7 +2083,7 @@
 						{
 							"variable": "otpValidationResult",
 							"operator": "is",
-							"dataValue": "false",
+							"dataValue": "true",
 							"combinator": "none"
 						}
 					],
@@ -3659,7 +3659,7 @@
 		}
 	],
 	"viewport": {
-		"x": -3841.957728268895,
+		"x": -3864.957728268895,
 		"y": -762.2165927314263,
 		"zoom": 0.7412335049014176
 	}
