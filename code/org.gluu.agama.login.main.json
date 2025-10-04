@@ -1069,11 +1069,6 @@
 							"variableTypeCheck": true,
 							"assignmentExpression": "\"User don't have registered mobile number\"",
 							"assignedVariableName": "uiFeedback.infoMessage"
-						},
-						{
-							"variableTypeCheck": true,
-							"assignmentExpression": "false",
-							"assignedVariableName": "DuplicateNumber"
 						}
 					],
 					"nodeIcon": "material-symbols:equal",
@@ -3731,8 +3726,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1210.5248697687075,
-		"y": -225.4199604951683,
+		"x": -1577.3181433253699,
+		"y": -333.07847025311867,
 		"zoom": 0.6381643844144765
 	}
 }
