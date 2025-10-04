@@ -139,7 +139,7 @@ public class JansNewPasswordService extends NewPasswordService {
 
     public boolean isPhoneUnique(String phone) {
         try {
-            List<User> users = userService.getUsersByAttribute("PHONE_NUMBER", phone);
+            List<User> users = userService.getUsersByAttribute(PHONE_NUMBER, phone);
 
             // If the list is empty or null → no duplicates
             return (users != null && !users.isEmpty()); // true if number already exists
