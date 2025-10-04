@@ -2083,7 +2083,7 @@
 						{
 							"variable": "otpValidationResult",
 							"operator": "is",
-							"dataValue": "true",
+							"dataValue": "false",
 							"combinator": "none"
 						}
 					],
@@ -2100,7 +2100,7 @@
 				"width": 110,
 				"height": 60
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "logNode-21ff7617-5770-4322-9679-801c92f708a5",
@@ -2285,7 +2285,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "finishNode-534196fd-fdce-4949-9f0f-76fbcf752444",
@@ -3659,8 +3659,8 @@
 		}
 	],
 	"viewport": {
-		"x": 0,
-		"y": 0,
-		"zoom": 1
+		"x": -3841.957728268895,
+		"y": -762.2165927314263,
+		"zoom": 0.7412335049014176
 	}
 }
