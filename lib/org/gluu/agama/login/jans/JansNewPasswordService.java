@@ -137,31 +137,31 @@ public class JansNewPasswordService extends NewPasswordService {
         }
     }
 
-    public boolean isPhoneUnique(String username, String phone) {
+    public boolean isPhoneUnique(String phone) {
         try {
-        // Normalize phone
-        phone = phone.replaceAll("[^0-9]", "");
+            // Normalize phone number (remove non-digits)
+            phone = phone.replaceAll("[^0-9]", "");
 
-        // Search all users with this phone
-        List<User> users = userService.getUsersByAttribute(PHONE_NUMBER, phone);
+            // Get all users with the same phone
+            // Assuming your getUsersByAttribute method works as intended
+            List<User> users = userService.getUsersByAttribute(PHONE_NUMBER, phone);
 
-        if (users == null || users.isEmpty()) {
-            return false; // Phone not used by anyone → not duplicate
-        }
-
-        for (User u : users) {
-            if (!u.getUserId().equalsIgnoreCase(username)) {
-                return true; // Another user has this phone → duplicate
+            // Check if any users were found
+            if (users != null && !users.isEmpty()) {
+                // Found one or more existing users with this phone number
+                logger.info("Phone {} is NOT unique. Used by {} other user(s).", phone, users.size());
+                return false;
             }
+
+            // No users found with this phone number
+            logger.info("Phone {} is unique (no existing user found)", phone);
+            return true;
+
+        } catch (Exception e) {
+            logger.error("Error checking phone uniqueness for {}: {}", phone, e.getMessage(), e);
+            // Safer: treat as non-unique in case of error during a new user sign-up
+            return false;
         }
-
-        // Only current user has this phone → not duplicate
-        return false;
-
-    } catch (Exception e) {
-        logger.error("Error checking phone duplication for {}: {}", phone, e.getMessage(), e);
-        return true; // fail-safe: treat as duplicate
-    }
     }
 
 
