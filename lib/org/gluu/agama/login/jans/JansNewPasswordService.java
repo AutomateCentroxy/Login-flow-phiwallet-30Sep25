@@ -256,7 +256,4 @@ public class JansNewPasswordService extends NewPasswordService {
         }
     }
 
-
-
-
 }
