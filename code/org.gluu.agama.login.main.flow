@@ -42,7 +42,7 @@ Repeat 6 times max
                     Finish credentials.username
                Otherwise
                     uiFeedback.infoMessage = "User don't have registered mobile number"
-                    ValidMobileNum = Repeat 3 times max
+                    ValidMobileNum = Repeat 4 times max
                          phoneInput = RRF "InputMobileNumber.ftlh" uiFeedback
                          phone = phoneInput.phoneNumber
                          validNumber = Call validationService isPhoneUnique credentials.username phone
@@ -113,5 +113,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_skqmf = {success:false, error: "Password validation failed!"}
-Finish it_skqmf
+it_qqmhy = {success:false, error: "Password validation failed!"}
+Finish it_qqmhy
