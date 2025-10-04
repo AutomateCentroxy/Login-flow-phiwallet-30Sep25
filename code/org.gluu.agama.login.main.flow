@@ -46,7 +46,7 @@ Repeat 6 times max
                          phoneInput = RRF "InputMobileNumber.ftlh" uiFeedback
                          phone = phoneInput.phoneNumber
                          Log "@info Check phone number for user +++++++:" credentials.username phone
-                         UniqueNumber = Call validationService isPhoneUnique phone
+                         UniqueNumber = Call validationService isPhoneUnique credentials.username phone
                          When UniqueNumber is true
                               // sent sms otp
                               smsOtpSend = Call validationService sendOTPCode credentials.username phone
@@ -114,5 +114,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_tykuu = {success:false, error: "Password validation failed!"}
-Finish it_tykuu
+it_edkkw = {success:false, error: "Password validation failed!"}
+Finish it_edkkw
