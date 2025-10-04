@@ -1127,7 +1127,7 @@
 			"type": "callNode",
 			"position": {
 				"x": 3587.661721319472,
-				"y": 893.4952048966718
+				"y": 892.146102362332
 			},
 			"data": {
 				"id": "callNode-1698e86a-9a35-474c-90fa-a041d64ea405",
@@ -1187,7 +1187,7 @@
 						{
 							"variable": "validNumber",
 							"operator": "is",
-							"dataValue": "true",
+							"dataValue": "false",
 							"combinator": "none"
 						}
 					],
@@ -1204,7 +1204,7 @@
 				"width": 110,
 				"height": 60
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "assignmentNode-234c9b78-fd16-48a9-8fdc-57eef2db4eb2",
@@ -2100,7 +2100,7 @@
 				"width": 110,
 				"height": 60
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "logNode-21ff7617-5770-4322-9679-801c92f708a5",
@@ -3659,8 +3659,8 @@
 		}
 	],
 	"viewport": {
-		"x": -3864.957728268895,
-		"y": -762.2165927314263,
+		"x": -2355.957728268895,
+		"y": -482.2165927314263,
 		"zoom": 0.7412335049014176
 	}
 }
