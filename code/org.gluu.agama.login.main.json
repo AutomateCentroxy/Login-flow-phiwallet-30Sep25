@@ -1204,7 +1204,7 @@
 				"width": 110,
 				"height": 60
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "assignmentNode-234c9b78-fd16-48a9-8fdc-57eef2db4eb2",
@@ -1436,7 +1436,7 @@
 			"id": "assignmentNode-ee1bf075-15e2-4961-89eb-aabf8d270c5c",
 			"type": "assignmentNode",
 			"position": {
-				"x": 4568.80195897269,
+				"x": 4570.078287741519,
 				"y": 1137.5571001135634
 			},
 			"data": {
@@ -1453,6 +1453,11 @@
 							"variableTypeCheck": true,
 							"assignmentExpression": "false",
 							"assignedVariableName": "otpValidationResult"
+						},
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "\"Otp send to the registered mobile number\"",
+							"assignedVariableName": "uiFeedback.infoMessage"
 						}
 					],
 					"nodeIcon": "material-symbols:equal",
@@ -1468,7 +1473,8 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false
+			"selected": true,
+			"dragging": false
 		},
 		{
 			"id": "repeatNode-5a448ece-3a7f-4894-aa9b-df36ed3e483e",
@@ -3659,8 +3665,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1281.8581764203363,
-		"y": -232.04563675733698,
-		"zoom": 0.5
+		"x": -2891.936608451775,
+		"y": -596.0554983977181,
+		"zoom": 0.7834971869493407
 	}
 }
