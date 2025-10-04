@@ -1126,7 +1126,7 @@
 			"id": "callNode-1698e86a-9a35-474c-90fa-a041d64ea405",
 			"type": "callNode",
 			"position": {
-				"x": 3533.661721319472,
+				"x": 3783.661721319472,
 				"y": 1036.146102362332
 			},
 			"data": {
@@ -1136,7 +1136,7 @@
 					"x": 3149.510733809154,
 					"y": 675.2499297408301
 				},
-				"previousNodeId": "assignmentNode-efb4c742-925e-45b5-8d54-19bd43b674e8",
+				"previousNodeId": "logNode-0ec6046b-9dc8-4f66-8ec4-6155c5ad31e3",
 				"agamaData": {
 					"javaClassName": "",
 					"javaMethodName": "isPhoneUnique",
@@ -2331,7 +2331,7 @@
 			"id": "whenNode-3c27252f-d74d-48a8-a19b-16415217cd27",
 			"type": "whenNode",
 			"position": {
-				"x": 3770.3195182312465,
+				"x": 4020.3195182312465,
 				"y": 1094.146102362332
 			},
 			"data": {
@@ -2367,7 +2367,7 @@
 				"width": 110,
 				"height": 60
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -2441,6 +2441,40 @@
 				"height": 123
 			},
 			"selected": false
+		},
+		{
+			"id": "logNode-0ec6046b-9dc8-4f66-8ec4-6155c5ad31e3",
+			"type": "logNode",
+			"position": {
+				"x": 3545.143717048537,
+				"y": 978.8119637797857
+			},
+			"data": {
+				"id": "logNode-0ec6046b-9dc8-4f66-8ec4-6155c5ad31e3",
+				"type": "logNode",
+				"position": {
+					"x": 3564.0311525292927,
+					"y": 895.8421579178943
+				},
+				"previousNodeId": "assignmentNode-efb4c742-925e-45b5-8d54-19bd43b674e8",
+				"agamaData": {
+					"logMessage": "\"Check phone number for user +++++++:\" credentials.username phone",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": ""
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 123
+			},
+			"selected": true,
+			"dragging": false
 		},
 		{
 			"id": "finishNode-3f1721e8-4b19-4366-9f8a-cbec504923a8",
@@ -3061,25 +3095,6 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_assignmentNode-234c9b78-fd16-48a9-8fdc-57eef2db4eb2"
-		},
-		{
-			"id": "assignmentNode-efb4c742-925e-45b5-8d54-19bd43b674e8-callNode-1698e86a-9a35-474c-90fa-a041d64ea405",
-			"type": "default",
-			"source": "assignmentNode-efb4c742-925e-45b5-8d54-19bd43b674e8",
-			"target": "callNode-1698e86a-9a35-474c-90fa-a041d64ea405",
-			"label": "",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"sourceHandle": "source_assignmentNode-efb4c742-925e-45b5-8d54-19bd43b674e8",
-			"targetHandle": "target_callNode-1698e86a-9a35-474c-90fa-a041d64ea405"
 		},
 		{
 			"id": "repeatNode-d4595f00-7930-4770-9623-0545ad93523b-rrfNode-79494f0f-5b8c-4684-bcb4-2aaf20985f1b",
@@ -3723,11 +3738,49 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_assignmentNode-54b925cd-1291-434b-bc6a-795cec5ac121"
+		},
+		{
+			"id": "assignmentNode-efb4c742-925e-45b5-8d54-19bd43b674e8-logNode-0ec6046b-9dc8-4f66-8ec4-6155c5ad31e3",
+			"type": "default",
+			"source": "assignmentNode-efb4c742-925e-45b5-8d54-19bd43b674e8",
+			"target": "logNode-0ec6046b-9dc8-4f66-8ec4-6155c5ad31e3",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_assignmentNode-efb4c742-925e-45b5-8d54-19bd43b674e8"
+		},
+		{
+			"id": "logNode-0ec6046b-9dc8-4f66-8ec4-6155c5ad31e3-callNode-1698e86a-9a35-474c-90fa-a041d64ea405",
+			"type": "default",
+			"source": "logNode-0ec6046b-9dc8-4f66-8ec4-6155c5ad31e3",
+			"target": "callNode-1698e86a-9a35-474c-90fa-a041d64ea405",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"sourceHandle": "source_logNode-0ec6046b-9dc8-4f66-8ec4-6155c5ad31e3",
+			"targetHandle": "target_callNode-1698e86a-9a35-474c-90fa-a041d64ea405"
 		}
 	],
 	"viewport": {
-		"x": -1243.0839102751527,
-		"y": -296.9838478144727,
-		"zoom": 0.5
+		"x": -4358.758409653647,
+		"y": -1138.1677822472493,
+		"zoom": 1.4824670098028352
 	}
 }
