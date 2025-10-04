@@ -1161,7 +1161,7 @@
 				"width": 170,
 				"height": 123
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1377,6 +1377,11 @@
 							"variableTypeCheck": true,
 							"assignmentExpression": "\"Otp send to the registered mobile number\"",
 							"assignedVariableName": "uiFeedback.infoMessage"
+						},
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "\"\"",
+							"assignedVariableName": "uiFeedback.errorMessage"
 						}
 					],
 					"nodeIcon": "material-symbols:equal",
@@ -1392,7 +1397,7 @@
 				"width": 170,
 				"height": 123
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -3779,8 +3784,8 @@
 		}
 	],
 	"viewport": {
-		"x": -3723.7861812659776,
-		"y": -964.3302552302571,
+		"x": -4344.916045885717,
+		"y": -944.0160828588027,
 		"zoom": 1.161508731925722
 	}
 }
