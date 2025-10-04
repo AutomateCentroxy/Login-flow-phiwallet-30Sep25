@@ -98,6 +98,7 @@ Repeat 6 times max
                               // "This phone is already used by another account. Please enter a different one.
                               Log "@info This phone is already used by another account. Please enter a different one."
                               InputNewMobileNumber = RRF "InputMobileNumber.ftlh" uiFeedback
+                              ValidNumber = Call validationService isPhoneUnique credentials.username phone
                     Log "@info ValidMobileNumber check competed"
           // Invalid credentials provided.
           Log "@error Invalid credentials provided"
@@ -113,5 +114,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_gzxxn = {success:false, error: "Password validation failed!"}
-Finish it_gzxxn
+it_jhthj = {success:false, error: "Password validation failed!"}
+Finish it_jhthj
