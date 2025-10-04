@@ -144,7 +144,7 @@ public class JansNewPasswordService extends NewPasswordService {
 
             // Get all users with the same phone
             // Assuming your getUsersByAttribute method works as intended
-            List<User> users = userService.getUsersByAttribute(PHONE_NUMBER, phone);
+            List<User> users = userService.getUsersByAttribute("mobile", phone, true, 10);
 
             // Check if any users were found
             if (users != null && !users.isEmpty()) {
