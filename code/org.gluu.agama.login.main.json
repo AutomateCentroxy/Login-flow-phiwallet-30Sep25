@@ -1092,7 +1092,7 @@
 			"id": "repeatNode-d4595f00-7930-4770-9623-0545ad93523b",
 			"type": "repeatNode",
 			"position": {
-				"x": 2928.393300649902,
+				"x": 2930.393300649902,
 				"y": 632.2678790540361
 			},
 			"data": {
@@ -2402,6 +2402,44 @@
 				"width": 170,
 				"height": 122
 			},
+			"selected": false
+		},
+		{
+			"id": "assignmentNode-54b925cd-1291-434b-bc6a-795cec5ac121",
+			"type": "assignmentNode",
+			"position": {
+				"x": 3428.393300649902,
+				"y": 632.2678790540361
+			},
+			"data": {
+				"id": "assignmentNode-54b925cd-1291-434b-bc6a-795cec5ac121",
+				"type": "assignmentNode",
+				"position": {
+					"x": 3428.393300649902,
+					"y": 632.2678790540361
+				},
+				"previousNodeId": "logNode-7b3ffd8f-ae3c-42ac-a811-4c8c811903a8",
+				"agamaData": {
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "{ success: false, error: \"ExceededTheNumberOfAttemptsAllowed\" }",
+							"assignedVariableName": "it_ValidMobileNum"
+						}
+					],
+					"nodeIcon": "material-symbols:equal",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": ""
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 122
+			},
 			"selected": true
 		}
 	],
@@ -3613,6 +3651,25 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_repeatNode-d4595f00-7930-4770-9623-0545ad93523b_continue"
+		},
+		{
+			"id": "logNode-7b3ffd8f-ae3c-42ac-a811-4c8c811903a8-assignmentNode-54b925cd-1291-434b-bc6a-795cec5ac121",
+			"type": "default",
+			"source": "logNode-7b3ffd8f-ae3c-42ac-a811-4c8c811903a8",
+			"target": "assignmentNode-54b925cd-1291-434b-bc6a-795cec5ac121",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_logNode-7b3ffd8f-ae3c-42ac-a811-4c8c811903a8"
 		}
 	],
 	"viewport": {
