@@ -137,28 +137,19 @@ public class JansNewPasswordService extends NewPasswordService {
         }
     }
 
-    public boolean isPhoneUnique(String username, String phone) {
+    public boolean isPhoneDuplicate(String phone) {
         try {
             List<User> users = userService.getUsersByAttribute("PHONE_NUMBER", phone);
-            if (users == null || users.isEmpty()) {
-                return true; // unique: no one has this phone
-            }
 
-            for (User u : users) {
-                if (!u.getUserId().equalsIgnoreCase(username)) {
-                    // Another user already has this phone
-                    return false;
-                }
-            }
-
-            // Only current user has this phone
-            return true;
+            // If the list is empty or null → no duplicates
+            return (users != null && !users.isEmpty()); // true if number already exists
 
         } catch (Exception e) {
-            logger.error("Error checking phone uniqueness for {}: {}", phone, e.getMessage(), e);
-            return false;
+            logger.error("Error checking phone duplication for {}: {}", phone, e.getMessage(), e);
+            return false; // fail-safe: treat as not duplicate if error occurs
         }
     }
+
 
 
 
