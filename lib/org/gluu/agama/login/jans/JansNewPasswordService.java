@@ -27,6 +27,8 @@ public class JansNewPasswordService extends NewPasswordService {
     public static final String INACTIVE = "inactive";
     public static final String ACTIVE = "active";
     public static final String CACHE_PREFIX = "lock_user_";
+    private static final String PHONE_NUMBER = "mobile";
+    private static final String LANG = "lang";
     private static final String PHONE_VERIFIED = "phoneNumberVerified";
     private static final int OTP_LENGTH = 6;
     private static final int OTP_CODE_LENGTH = 6;
@@ -136,7 +138,7 @@ public class JansNewPasswordService extends NewPasswordService {
 
     public boolean isPhoneUnique(String username, String phone) {
         try {
-            User existing = userService.getUserByAttribute("phoneNumber", phone);
+            User existing = userService.getUserByAttribute("PHONE_NUMBER", phone);
             // If another user already has this phone → not unique
             return existing == null || existing.getUserId().equalsIgnoreCase(username);
         } catch (Exception e) {
@@ -153,7 +155,7 @@ public class JansNewPasswordService extends NewPasswordService {
         try {
             User user = userService.getUser(username);
             if (user == null) return null;
-            Object phone = user.getAttribute("phoneNumber", true, false);
+            Object phone = user.getAttribute("PHONE_NUMBER", true, false);
             return phone != null ? phone.toString() : null;
         } catch (Exception e) {
             logger.error("Error fetching phone number for {}: {}", username, e.getMessage(), e);
@@ -171,7 +173,7 @@ public class JansNewPasswordService extends NewPasswordService {
             }
 
             // Set the phone number and mark it as verified
-            user.setAttribute("phoneNumber", phone);
+            user.setAttribute(PHONE_NUMBER, phone);
             user.setAttribute("phoneNumberVerified", Boolean.TRUE);
             userService.updateUser(user);
 
@@ -199,7 +201,7 @@ public class JansNewPasswordService extends NewPasswordService {
             User user = userService.getUser(username);
             String lang = null;
             if (user != null) {
-                Object val = user.getAttribute("preferredLanguage", true, false);
+                Object val = user.getAttribute("LANG", true, false);
                 if (val != null) {
                     lang = val.toString().toLowerCase();
                 }
