@@ -1154,7 +1154,7 @@
 					"displayName": "Valid Mobile Number",
 					"hasComment": true,
 					"comment": "",
-					"asssignedVariableName": "validNumber"
+					"asssignedVariableName": "DuplicateNumber"
 				}
 			},
 			"measured": {
@@ -1185,7 +1185,7 @@
 					"conditionInputField": "",
 					"conditions": [
 						{
-							"variable": "validNumber",
+							"variable": "DuplicateNumber",
 							"operator": "is",
 							"dataValue": "true",
 							"combinator": "none"
@@ -3726,8 +3726,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1834.8015045848424,
-		"y": -286.7297274276177,
-		"zoom": 0.6381643844144765
+		"x": -2166.6116452722963,
+		"y": -288.52939974119795,
+		"zoom": 0.7412335049014176
 	}
 }
