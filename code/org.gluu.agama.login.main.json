@@ -1161,7 +1161,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -2350,7 +2350,7 @@
 						{
 							"variable": "ValidNumber",
 							"operator": "is",
-							"dataValue": "true",
+							"dataValue": "false",
 							"combinator": "none"
 						}
 					],
@@ -2474,7 +2474,7 @@
 				"width": 170,
 				"height": 122
 			},
-			"selected": true
+			"selected": false
 		}
 	],
 	"edges": [
@@ -3726,8 +3726,8 @@
 		}
 	],
 	"viewport": {
-		"x": -2786.511027948318,
-		"y": -488.77240082953733,
-		"zoom": 1
+		"x": -2038.4932784814105,
+		"y": -435.3266902533867,
+		"zoom": 0.6745512671698494
 	}
 }
