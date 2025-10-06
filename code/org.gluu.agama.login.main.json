@@ -2576,7 +2576,7 @@
 				"width": 110,
 				"height": 60
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -2596,21 +2596,22 @@
 				"previousNodeId": "whenNode-6ec88576-0c75-4147-b416-2db53c3c1595",
 				"branching": "success",
 				"agamaData": {
-					"logMessage": "",
-					"logLevel": "",
+					"logMessage": "\"User Requested for change Phone number\"",
+					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": ""
+					"comment": "\"User Requested for change Phone number\""
 				}
 			},
 			"measured": {
 				"width": 168,
 				"height": 120
-			}
+			},
+			"selected": true
 		},
 		{
 			"id": "assignmentNode-f7698095-3237-4ca5-b3d1-8a4da3c1ccf7",
@@ -4072,8 +4073,8 @@
 		}
 	],
 	"viewport": {
-		"x": -3865.8167140218347,
-		"y": -901.1039203486284,
+		"x": -3843.8167140218347,
+		"y": -1001.1039203486284,
 		"zoom": 0.860949188338904
 	}
 }
