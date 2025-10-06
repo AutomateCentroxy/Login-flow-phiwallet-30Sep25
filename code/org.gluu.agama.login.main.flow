@@ -61,6 +61,7 @@ Repeat 6 times max
                                    When otpCreds.changePhone is "yes"
                                         // "User Requested for change Phone number"
                                         Log "@info User Requested for change Phone number"
+                                        uiFeedback.infoMessage = "Please enter a new phone number"
                                         // phoneInput
                                         phoneInput = RRF "InputMobileNumber.ftlh" uiFeedback
                                    Otherwise
@@ -122,5 +123,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_cmdqb = {success:false, error: "Password validation failed!"}
-Finish it_cmdqb
+it_szzae = {success:false, error: "Password validation failed!"}
+Finish it_szzae
