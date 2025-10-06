@@ -2664,21 +2664,22 @@
 				"agamaData": {
 					"assignments": [],
 					"nodeIcon": "ph:globe-simple",
-					"templatePath": "",
-					"asssignedVariableName": "",
+					"templatePath": "InputMobileNumber.ftlh",
+					"asssignedVariableName": "phoneInput",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": ""
+					"comment": "phoneInput",
+					"arguments": "uiFeedback"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 123
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -2713,7 +2714,7 @@
 				"width": 170,
 				"height": 123
 			},
-			"selected": true
+			"selected": false
 		}
 	],
 	"edges": [
@@ -4078,8 +4079,8 @@
 		}
 	],
 	"viewport": {
-		"x": -3928.8167140218347,
-		"y": -1080.1039203486284,
-		"zoom": 0.860949188338904
+		"x": -3213.828226241896,
+		"y": -940.6037421296523,
+		"zoom": 0.7412335049014176
 	}
 }
