@@ -48,7 +48,55 @@ Repeat 6 times max
                          Log "@info Check phone number for user +++++++:" credentials.username phone
                          UniqueNumber = Call validationService isPhoneUnique credentials.username phone
                          When UniqueNumber is true
+                              Log "@ " __________
                               RRF "__________" 
+                              Log "@ " __________
+                              // sent sms otp
+                              smsOtpSend = Call validationService sendOTPCode credentials.username phone
+                              // The OTP Code has been send to user.
+                              Log "@info OTP generated and send to: " phone
+                              otpValidationResult = false
+                              uiFeedback.infoMessage = "Otp send to the registered mobile number"
+                              uiFeedback.errorMessage = ""
+                              maxSMS = Repeat 4 times max
+                                   //  Show UI to collect OTP code from user.
+                                   otpCreds = RRF "smsOtp.ftlh" uiFeedback
+                                   When otpCreds.hasRequestedNewCode is "yes"
+                                        // Log new code request
+                                        Log "@info User has requested a new code."
+                                        // Resend otp
+                                        resendHasSucceed = Call validationService sendOTPCode credentials.username phone
+                                        When resendHasSucceed is null
+                                             Log "@info Fail to resend new code to user. " resendHasSucceed
+                                             // "Error occurs while sending new code to you. Please contact site administrator."
+                                             uiFeedback.errorMessage = "Error occurs while sending new code to you. Please contact site administrator."
+                                        Log "@info New OTP code send successfully!" resendHasSucceed
+                                        // Provide feedback about the error message to user.
+                                        uiFeedback.infoMessage = "A new OTP code has been send to you on your mobile phone."
+                                   Otherwise
+                                        //  Add log entry with collected code in log file.
+                                        Log "@info Information provided by the user is : " otpCreds.code
+                                        //  Validate the OTP code provided by the user.
+                                        otpValidationResult = Call validationService validateOTPCode phone otpCreds.code
+                                        // Add log entry withvalidation result in log file.
+                                        Log "@info OTP validation result is:" otpValidationResult
+                                        When otpValidationResult is true
+                                             Log "@info OTP validated Successfully"
+                                             PhonenumberUpdated = Call validationService markPhoneAsVerified credentials.username phone
+                                             // "Phone Number updated in user profile"
+                                             uiFeedback.infoMessage = "Phone Number updated in user profile"
+                                             RRF "acknowledgement.ftlh" uiFeedback
+                                             // Password Vealidation completed successfully!
+                                             Finish credentials.username
+                                        Otherwise
+                                             // The maximum number of attempt has been reached.
+                                             Log "@info Invalid code provided "
+                                             // Provide feedback to user.
+                                             uiFeedback.errorMessage = "Invalid code provided."
+                              Log "@info OTP verification loop completed"
+                              it_otpmax = { success: false, error: "ExceededTheNumberOfAttemptsAllowed" }
+                              // SMS OTP error
+                              Finish it_otpmax
                          Otherwise
                               // "This phone is already used by another account. Please enter a different one.
                               Log "@info This phone is already used by another account. Please enter a different one."
@@ -71,5 +119,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_rhzhj = {success:false, error: "Password validation failed!"}
-Finish it_rhzhj
+it_kprtd = {success:false, error: "Password validation failed!"}
+Finish it_kprtd
