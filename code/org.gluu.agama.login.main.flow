@@ -1,6 +1,6 @@
 Flow org.gluu.agama.login.main
      Basepath ""
-     Timeout 500 seconds
+     Timeout 50000 seconds
      Configs conf
 Log "@info Start execution of the password validation flow."
 //  Create json variable for UI feedback.
@@ -57,14 +57,15 @@ Repeat 6 times max
                               uiFeedback.errorMessage = ""
                               maxSMS = Repeat 4 times max
                                    //  Show UI to collect OTP code from user.
-                                   otpCreds = RRF "otp.ftlh" uiFeedback
+                                   otpCreds = RRF "smsOtp.ftlh" uiFeedback
                                    When otpCreds.hasRequestedNewCode is "yes"
                                         // Log new code request
                                         Log "@info User has requested a new code."
                                         // Resend otp
-                                        resendHasSucceed = Call validationService sendOTPCode phone credentials.username
+                                        resendHasSucceed = Call validationService sendOTPCode credentials.username phone
                                         When resendHasSucceed is null
                                              Log "@info Fail to resend new code to user. " resendHasSucceed
+                                             // "Error occurs while sending new code to you. Please contact site administrator."
                                              uiFeedback.errorMessage = "Error occurs while sending new code to you. Please contact site administrator."
                                         Log "@info New OTP code send successfully!" resendHasSucceed
                                         // Provide feedback about the error message to user.
@@ -115,5 +116,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_abdzy = {success:false, error: "Password validation failed!"}
-Finish it_abdzy
+it_ijgyg = {success:false, error: "Password validation failed!"}
+Finish it_ijgyg

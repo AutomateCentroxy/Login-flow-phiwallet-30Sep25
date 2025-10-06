@@ -229,13 +229,14 @@ public class JansNewPasswordService extends NewPasswordService {
 
             // Localized message
             Map<String, String> messages = new HashMap<>();
-            messages.put("en", "Your Phi Wallet verification code is: " + otpCode);
-            messages.put("fr", "Votre code de vérification Phi Wallet est : " + otpCode);
-            messages.put("pt", "Seu código de verificação Phi Wallet é: " + otpCode);
-            messages.put("es", "Su código de verificación de Phi Wallet es: " + otpCode);
-            messages.put("id", "Kode verifikasi Phi Wallet Anda adalah: " + otpCode);
-            messages.put("ar", "رمز التحقق الخاص بـ Phi Wallet الخاص بك هو: " + otpCode);
 
+            messages.put("ar", "رمز Phi Wallet الخاص بك هو " + otpCode + ". لا تشاركه مع أي شخص.");
+            messages.put("en", "Your Phi Wallet OTP is " + otpCode + ". Do not share it with anyone.");
+            messages.put("es", "Tu código de Phi Wallet es " + otpCode + ". No lo compartas con nadie.");
+            messages.put("fr", "Votre code Phi Wallet est " + otpCode + ". Ne le partagez avec personne.");
+            messages.put("id", "Kode Phi Wallet Anda adalah " + otpCode + ". Jangan bagikan kepada siapa pun.");
+            messages.put("pt", "O seu código da Phi Wallet é " + otpCode + ". Não o partilhe com ninguém.");
+            
             String message = messages.getOrDefault(lang, messages.get("en"));
 
             // Send SMS
