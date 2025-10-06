@@ -1995,14 +1995,14 @@
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": ""
+					"comment": "\"Error occurs while sending new code to you. Please contact site administrator.\""
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 123
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -2608,8 +2608,8 @@
 				}
 			},
 			"measured": {
-				"width": 168,
-				"height": 120
+				"width": 170,
+				"height": 123
 			},
 			"selected": false
 		},
@@ -2649,7 +2649,7 @@
 				"width": 170,
 				"height": 123
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -4085,8 +4085,8 @@
 		}
 	],
 	"viewport": {
-		"x": -3213.828226241896,
-		"y": -940.6037421296523,
-		"zoom": 0.7412335049014176
+		"x": -6268.526162736107,
+		"y": -1588.872495472223,
+		"zoom": 1
 	}
 }
