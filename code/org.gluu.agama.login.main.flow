@@ -58,6 +58,7 @@ Repeat 6 times max
                               maxSMS = Repeat 4 times max
                                    //  Show UI to collect OTP code from user.
                                    otpCreds = RRF "smsOtp.ftlh" uiFeedback
+                                   When 
                                    When otpCreds.hasRequestedNewCode is "yes"
                                         // Log new code request
                                         Log "@info User has requested a new code."
@@ -115,5 +116,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_ufloo = {success:false, error: "Password validation failed!"}
-Finish it_ufloo
+it_jiqbi = {success:false, error: "Password validation failed!"}
+Finish it_jiqbi
