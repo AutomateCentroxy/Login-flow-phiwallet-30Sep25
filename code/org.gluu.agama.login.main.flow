@@ -73,6 +73,7 @@ Repeat 6 times max
                                              resendHasSucceed = Call validationService sendOTPCode phone credentials.username
                                              When resendHasSucceed is null
                                                   Log "@info Fail to resend new code to user. " resendHasSucceed
+                                                  // "Error occurs while sending new code to you. Please contact site administrator."
                                                   uiFeedback.errorMessage = "Error occurs while sending new code to you. Please contact site administrator."
                                              Log "@info New OTP code send successfully!" resendHasSucceed
                                              // Provide feedback about the error message to user.
@@ -123,5 +124,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_szzae = {success:false, error: "Password validation failed!"}
-Finish it_szzae
+it_coxyl = {success:false, error: "Password validation failed!"}
+Finish it_coxyl
