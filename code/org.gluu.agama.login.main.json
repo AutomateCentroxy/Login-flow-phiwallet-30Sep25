@@ -8,7 +8,7 @@
 					"configParams": "{\n  \"maxLoginAttempt\": 6,\n  \"lockExpTime\": 180,\n  \"enableLock\": true,\n  \"ACCOUNT_SID\": \"PUT_YOUR_TWILIO_ACCOUNT_SID_HERE\",\n  \"AUTH_TOKEN\": \"PUT_YOUR_TWILIO_AUTH_TOKEN_HERE\",\n  \"FROM_NUMBER\": \"PUT_YOUR_TWILIO_FROM_NUMBER_HERE\"\n}",
 					"creationDate": "29/11/2024",
 					"nodeIcon": "material-symbols:line-start-square",
-					"timeout": "500",
+					"timeout": "50000",
 					"inputs": "",
 					"configs": "conf",
 					"flowname": "org.gluu.agama.login.main",
@@ -33,7 +33,7 @@
 				"width": 170,
 				"height": 123
 			},
-			"selected": false,
+			"selected": true,
 			"deletable": false,
 			"dragging": false
 		},
@@ -1575,7 +1575,7 @@
 				"width": 170,
 				"height": 123
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -3786,8 +3786,8 @@
 		}
 	],
 	"viewport": {
-		"x": -3359.2399237064706,
-		"y": -1052.375254436385,
-		"zoom": 0.860949188338904
+		"x": 0,
+		"y": 0,
+		"zoom": 1
 	}
 }
