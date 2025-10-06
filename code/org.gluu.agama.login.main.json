@@ -1397,7 +1397,7 @@
 				"width": 170,
 				"height": 123
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1558,7 +1558,7 @@
 				"agamaData": {
 					"assignments": [],
 					"nodeIcon": "ph:globe-simple",
-					"templatePath": "otp.ftlh",
+					"templatePath": "smsOtp.ftlh",
 					"asssignedVariableName": "otpCreds",
 					"nodeColor": "",
 					"titleColor": "",
@@ -1566,14 +1566,16 @@
 					"displayName": "RRF",
 					"hasComment": true,
 					"comment": " Show UI to collect OTP code from user.",
-					"arguments": "uiFeedback"
+					"arguments": [
+						"uiFeedback"
+					]
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 123
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -3784,8 +3786,8 @@
 		}
 	],
 	"viewport": {
-		"x": -4344.916045885717,
-		"y": -944.0160828588027,
-		"zoom": 1.161508731925722
+		"x": -3359.2399237064706,
+		"y": -1052.375254436385,
+		"zoom": 0.860949188338904
 	}
 }
