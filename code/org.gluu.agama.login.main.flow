@@ -63,7 +63,7 @@ Repeat 6 times max
                                         Log "@info User Requested for change Phone number"
                                         RRF "__________" 
                                    Otherwise
-                                        Log "@ " __________
+                                        Log "@info User Go with OTP flow"
                                         When otpCreds.hasRequestedNewCode is "yes"
                                              // Log new code request
                                              Log "@info User has requested a new code."
@@ -121,5 +121,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_bqjlz = {success:false, error: "Password validation failed!"}
-Finish it_bqjlz
+it_gwpur = {success:false, error: "Password validation failed!"}
+Finish it_gwpur
