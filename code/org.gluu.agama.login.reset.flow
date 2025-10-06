@@ -2,7 +2,7 @@ Flow org.gluu.agama.login.reset
      Basepath ""
      Timeout 500 seconds
 // Initiate reset service
-resetService = Call org.gluu.agama.login.ResetService#getInstance 
+resetService = Call org.gluu.agama.login.NewResetService#getInstance 
 // Assign mail form feedback 
 mailUIFeedback = {}
 // Max 3 times repeat
@@ -71,5 +71,5 @@ Repeat 3 times max
 // Max attampt reached
 Log "@info Max attampt reached"
 // Max attempts reached
-it_jkxts = {success:false, error: "Max attempts reached"}
-Finish it_jkxts
+it_fjdyw = {success:false, error: "Max attempts reached"}
+Finish it_fjdyw

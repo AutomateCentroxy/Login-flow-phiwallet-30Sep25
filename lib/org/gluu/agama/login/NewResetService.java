@@ -3,9 +3,9 @@ package org.gluu.agama.login;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.gluu.agama.login.jans.JansResetService;
+import org.gluu.agama.login.jans.JansNewResetService;
 
-public abstract class ResetService {
+public abstract class NewResetService {
 
     public abstract boolean passwordPolicyMatch(String userPassword);
 
@@ -15,17 +15,9 @@ public abstract class ResetService {
 
     public abstract String updateUserPassword(String userPassword, String mail);   
 
-    public static ResetService  getInstance(){
-        return new JansResetService();
+    public static NewResetService  getInstance(){
+        return new JansNewResetService();
     }
 
 
 }
-
-
-
-
-
-
-
-

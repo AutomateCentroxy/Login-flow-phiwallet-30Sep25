@@ -7,20 +7,32 @@ import io.jans.as.server.service.UserService;
 import io.jans.orm.model.base.CustomObjectAttribute;
 import io.jans.service.CacheService;
 import io.jans.service.cdi.util.CdiUtil;
-import org.gluu.agama.login.PasswordService;
+import org.gluu.agama.login.NewPasswordService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import io.jans.agama.engine.script.LogUtils;
 
+import java.security.SecureRandom;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-public class JansPasswordService extends PasswordService {
+import com.twilio.Twilio;
+import com.twilio.rest.api.v2010.account.Message;
+import com.twilio.type.PhoneNumber;
+
+public class JansNewPasswordService extends NewPasswordService {
 
     private static final Logger logger = LoggerFactory.getLogger(FlowService.class);
     public static final String JANS_STATUS = "jansStatus";
     public static final String INACTIVE = "inactive";
     public static final String ACTIVE = "active";
     public static final String CACHE_PREFIX = "lock_user_";
+    private static final String PHONE_NUMBER = "mobile";
+    private static final String LANG = "lang";
+    private static final String PHONE_VERIFIED = "phoneNumberVerified";
+    private static final int OTP_LENGTH = 6;
+    private static final int OTP_CODE_LENGTH = 6;
     private static AuthenticationService authenticationService = CdiUtil.bean(AuthenticationService.class);
     private static UserService userService = CdiUtil.bean(UserService.class);
     private static CacheService cacheService = CdiUtil.bean(CacheService.class);
@@ -29,15 +41,16 @@ public class JansPasswordService extends PasswordService {
     private int DEFAULT_LOCK_EXP_TIME = 180;
 
     private HashMap<String, String> flowConfig;
+    private static final Map<String, String> otpStore = new HashMap<>();
 
-    public JansPasswordService(HashMap config) {
+    public JansNewPasswordService(HashMap config) {
         logger.info("Flow config provided is  {}.", config);
         flowConfig = config;
         DEFAULT_MAX_LOGIN_ATTEMPT = flowConfig.get("maxLoginAttempt") != null ? flowConfig.get("maxLoginAttempt") : DEFAULT_MAX_LOGIN_ATTEMPT;
         DEFAULT_LOCK_EXP_TIME = flowConfig.get("lockExpTime") != null ? flowConfig.get("lockExpTime") : DEFAULT_LOCK_EXP_TIME;
     }
 
-    public JansPasswordService() {
+    public JansNewPasswordService() {
     }
 
     @Override
@@ -122,13 +135,39 @@ public class JansPasswordService extends PasswordService {
             logger.error("Error checking phone verification for {}: {}", username, e.getMessage(), e);
             return false;
         }
-}
+    }
+
+    public boolean isPhoneUnique(String username, String phone) {
+        try {
+            // Normalize phone number
+            String normalizedPhone = phone.startsWith("+") ? phone : "+" + phone;
+
+            // Check DB for existing users
+            List<User> users = userService.getUsersByAttribute("mobile", normalizedPhone, true, 10);
+
+            if (users != null && !users.isEmpty()) {
+                for (User u : users) {
+                    if (!u.getUserId().equalsIgnoreCase(username)) {
+                        logger.info("Phone {} is NOT unique. Already used by {}", phone, u.getUserId());
+                        return false; // duplicate
+                    }
+                }
+            }
+
+            logger.info("Phone {} is unique", phone);
+            return true;
+        } catch (Exception e) {
+            logger.error("Error checking phone uniqueness for {}", phone, e);
+            return false; // safest default on error
+        }
+    }
+
 
     public String getPhoneNumber(String username) {
         try {
             User user = userService.getUser(username);
             if (user == null) return null;
-            Object phone = user.getAttribute("phoneNumber", true, false);
+            Object phone = user.getAttribute("PHONE_NUMBER", true, false);
             return phone != null ? phone.toString() : null;
         } catch (Exception e) {
             logger.error("Error fetching phone number for {}: {}", username, e.getMessage(), e);
@@ -136,15 +175,95 @@ public class JansPasswordService extends PasswordService {
         }
     }
 
-    public boolean markPhoneAsVerified(String username) {
+
+    public String markPhoneAsVerified(String username, String phone) {
         try {
             User user = userService.getUser(username);
-            if (user == null) return false;
+            if (user == null) {
+                logger.warn("User {} not found while marking phone verified", username);
+                return "User not found.";
+            }
+
+            // Set the phone number and mark it as verified
+            user.setAttribute(PHONE_NUMBER, phone);
             user.setAttribute("phoneNumberVerified", Boolean.TRUE);
             userService.updateUser(user);
-            return true;
+
+            logger.info("Phone {} verified and updated for user {}", phone, username);
+            return "Phone " + phone + " verified successfully for user " + username;
         } catch (Exception e) {
             logger.error("Error marking phone verified for {}: {}", username, e.getMessage(), e);
+            return "Error: " + e.getMessage();
+        }
+    }
+
+    private String generateSMSOtpCode(int codeLength) {
+        String numbers = "0123456789";
+        SecureRandom random = new SecureRandom();
+        char[] otp = new char[codeLength];
+        for (int i = 0; i < codeLength; i++) {
+            otp[i] = numbers.charAt(random.nextInt(numbers.length()));
+        }
+        return new String(otp);
+    }
+
+    public boolean sendOTPCode(String username, String phone) {
+        try {
+            // Get user preferred language from profile
+            User user = userService.getUser(username);
+            String lang = null;
+            if (user != null) {
+                Object val = user.getAttribute("LANG", true, false);
+                if (val != null) {
+                    lang = val.toString().toLowerCase();
+                }
+            }
+            if (lang == null || lang.isEmpty()) {
+                lang = "en";
+            }
+
+            // Generate OTP
+            String otpCode = generateSMSOtpCode(OTP_LENGTH);
+            otpStore.put(phone, otpCode);
+            logger.info("Generated OTP {} for phone {}", otpCode, phone);
+
+            // Localized message
+            Map<String, String> messages = new HashMap<>();
+            messages.put("en", "Your Phi Wallet verification code is: " + otpCode);
+            messages.put("fr", "Votre code de vérification Phi Wallet est : " + otpCode);
+            messages.put("pt", "Seu código de verificação Phi Wallet é: " + otpCode);
+            messages.put("es", "Su código de verificación de Phi Wallet es: " + otpCode);
+            messages.put("id", "Kode verifikasi Phi Wallet Anda adalah: " + otpCode);
+            messages.put("ar", "رمز التحقق الخاص بـ Phi Wallet الخاص بك هو: " + otpCode);
+
+            String message = messages.getOrDefault(lang, messages.get("en"));
+
+            // Send SMS
+            PhoneNumber FROM_NUMBER = new PhoneNumber(flowConfig.get("FROM_NUMBER"));
+            PhoneNumber TO_NUMBER = new PhoneNumber(phone);
+
+            Twilio.init(flowConfig.get("ACCOUNT_SID"), flowConfig.get("AUTH_TOKEN"));
+            Message.creator(TO_NUMBER, FROM_NUMBER, message).create();
+
+            logger.info("OTP {} sent successfully to {}", otpCode, phone);
+            return true;
+        } catch (Exception ex) {
+            logger.error("Failed to send OTP to {}. Error: {}", phone, ex.getMessage(), ex);
+            return false;
+        }
+    }
+
+    public boolean validateOTPCode(String phone, String code) {
+        try {
+            String storedCode = otpStore.getOrDefault(phone, "NULL");
+            logger.info("User submitted code: {} — Stored code: {}", code, storedCode);
+            if (storedCode.equalsIgnoreCase(code)) {
+                otpStore.remove(phone); // remove after successful validation
+                return true;
+            }
+            return false;
+        } catch (Exception ex) {
+            logger.error("Error validating OTP {} for phone {}: {}", code, phone, ex.getMessage(), ex);
             return false;
         }
     }
