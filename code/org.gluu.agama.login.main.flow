@@ -48,9 +48,6 @@ Repeat 6 times max
                          Log "@info Check phone number for user +++++++:" credentials.username phone
                          UniqueNumber = Call validationService isPhoneUnique credentials.username phone
                          When UniqueNumber is true
-                              Log "@info Go for choose phoneaction "
-                              RRF "__________" 
-                              Log "@ " __________
                               // sent sms otp
                               smsOtpSend = Call validationService sendOTPCode credentials.username phone
                               // The OTP Code has been send to user.
@@ -119,5 +116,5 @@ Repeat 6 times max
 // The login flow will end here with failure.
 Log "@info The maximum login attempt has been reached!"
 // Maximum attempts reached. Password validation failed!
-it_xwpug = {success:false, error: "Password validation failed!"}
-Finish it_xwpug
+it_stskg = {success:false, error: "Password validation failed!"}
+Finish it_stskg
