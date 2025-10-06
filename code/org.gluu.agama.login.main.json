@@ -2553,8 +2553,8 @@
 				"previousNodeId": "whenNode-5e26b2c7-3d22-4eb5-bbf4-69f1b62e8a62",
 				"branching": "success",
 				"agamaData": {
-					"logMessage": "",
-					"logLevel": "",
+					"logMessage": "\"Go for choose phoneaction \"",
+					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
 					"titleColor": "",
@@ -2568,7 +2568,7 @@
 				"width": 170,
 				"height": 123
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -4015,8 +4015,8 @@
 		}
 	],
 	"viewport": {
-		"x": -3802.341311268756,
-		"y": -542.182449592126,
-		"zoom": 0.9100388240808991
+		"x": -2610.0160425943122,
+		"y": -320.20147082370795,
+		"zoom": 0.7834971869493407
 	}
 }
